@@ -502,3 +502,19 @@ Probado contra Python, Go y C# reales (300 commits). Corregido:
 - **`review_pr(base)`** / `node guard.mjs <dir> pr [base]` (`lib/pr.mjs`): resumen en Markdown listo para pegar en un PR. Extrae la base con `git archive`, la compara con el árbol actual (incluye lo que aún no está en commit) y muestra riesgo del cambio (bajo/medio/alto), archivos, qué revisar, notas, pruebas a correr y quién debería revisar. Base y actual se miden igual (sin historial) para no confundir cambios reales con diferencias de medición; sale con código 1 si el riesgo es alto. Ejemplo de CI: `node guard.mjs . pr origin/main >> $GITHUB_STEP_SUMMARY`.
 
 **Siguiente (no hecho):** sugerencias de relaciones con candidatos detectados (túneles, constantes, puentes) como evidencia; explicaciones con citas.
+
+---
+
+## codemap_desktop
+
+Adaptación de Code Graph como motor de grafo y visualizador arquitectónico embebido para el IDE **Codemap Desktop**.
+
+### Objetivos y decisiones
+1. **Consumo programático sin servidor obligatorio**: Se añade `adaptor.mjs` con `analyzeWorkspace(rootPath, options)`, `generateViewerBundle(world, options)` y `getGraphSummary(world)`. Permite al proceso de Electron analizar cualquier proyecto abierto y obtener tanto los datos estructurados en JSON (para paneles de relaciones, métricas y hallazgos) como el visor Canvas embebido.
+2. **Puente bidireccional host ↔ visor (`viewer/js/bridge.js`)**:
+   - **Visor → Host (`codemap:open-file`)**: Al hacer clic o doble clic en un nodo/edificio dentro del visor (Ciudad, Galaxia, Grafo), se notifica a la ventana contenedora (`window.parent.postMessage`) para que el editor de Codemap Desktop abra el archivo correspondiente de forma nativa.
+   - **Host → Visor (`codemap:focus-file`)**: Cuando el usuario cambia de pestaña activa o navega en el árbol de archivos del IDE, el host envía un mensaje y la cámara del visor vuela suavemente al edificio correspondiente en el Canvas (`selectNode(id, { fly: true })`).
+   - **Control de vistas (`codemap:set-view`)**: Permite conmutar programáticamente entre Ciudad, Galaxia y Grafo desde la barra de herramientas del IDE.
+3. **Cero dependencias y Node ≥ 22 ESM**: Toda la adaptación mantiene la arquitectura pura sin librerías externas.
+4. **Soporte multiplataforma en `lib/pr.mjs`**: Uso de pipe directo entre `git archive` y `tar -xf -` sin requerir `sh`, garantizando compatibilidad nativa en Windows y sistemas Unix.
+

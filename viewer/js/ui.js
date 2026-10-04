@@ -14,6 +14,7 @@ function selectNode(id, o = {}) {
   if (o.fly) flyToNode(id, o.zoom); else if (o.legible !== false) ensureLegible(id);
   renderCrumbs(); renderPanel(); requestRender();
   if (S.tab === 'code') loadCode(id, o.line);
+  Bus.emit('node-selected', S.N[id]);
 }
 function clearSelection() { if (!S.sel) return; S.sel = null; renderCrumbs(); renderPanel(); requestRender(); }
 function clearAll() { S.sel = null; S.selEdge = null; S.focusSet = null; S.trace = null; S.path = null; S.focusLabel = ''; renderCrumbs(); renderPanel(); renderFocusChip(); requestRender(); }
