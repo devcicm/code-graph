@@ -1,0 +1,7687 @@
+{
+  "meta": {
+    "root": "code-graph-shop-repo",
+    "generated": "2026-10-04T08:01:47.657Z",
+    "tool": "code-graph/0.2",
+    "externals": true,
+    "languages": {
+      "javascript": 27
+    },
+    "langInfo": {
+      "javascript": {
+        "name": "JavaScript / TypeScript",
+        "lexer": {
+          "line": [
+            "//"
+          ],
+          "block": [
+            [
+              "/*",
+              "*/"
+            ]
+          ],
+          "strings": [
+            "\"",
+            "'",
+            "`"
+          ],
+          "keywords": [
+            "import",
+            "export",
+            "from",
+            "default",
+            "const",
+            "let",
+            "var",
+            "function",
+            "return",
+            "if",
+            "else",
+            "for",
+            "while",
+            "do",
+            "switch",
+            "case",
+            "break",
+            "continue",
+            "new",
+            "class",
+            "extends",
+            "async",
+            "await",
+            "try",
+            "catch",
+            "finally",
+            "throw",
+            "typeof",
+            "instanceof",
+            "in",
+            "of",
+            "this",
+            "super",
+            "static",
+            "get",
+            "set",
+            "yield",
+            "null",
+            "undefined",
+            "true",
+            "false",
+            "interface",
+            "type",
+            "enum",
+            "implements",
+            "public",
+            "private",
+            "protected",
+            "readonly",
+            "abstract",
+            "declare",
+            "namespace",
+            "module",
+            "as",
+            "is",
+            "keyof"
+          ]
+        }
+      }
+    },
+    "git": {
+      "available": true,
+      "branch": "main",
+      "head": "019e11b",
+      "commits": 32,
+      "first": "2025-10-29T08:01:41+00:00",
+      "last": "2026-10-01T05:01:41+00:00",
+      "uncommitted": 3
+    }
+  },
+  "nodes": [
+    {
+      "id": "pkg:fs",
+      "label": "fs",
+      "dir": "(externo)",
+      "ext": "",
+      "lines": 0,
+      "exports": [],
+      "kind": "external",
+      "summary": "paquete externo",
+      "fanIn": 1,
+      "fanOut": 0,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "external",
+      "community": -1
+    },
+    {
+      "id": "pkg:node:assert",
+      "label": "node:assert",
+      "dir": "(externo)",
+      "ext": "",
+      "lines": 0,
+      "exports": [],
+      "kind": "external",
+      "summary": "módulo de Node",
+      "fanIn": 0,
+      "fanOut": 0,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "external",
+      "community": -1
+    },
+    {
+      "id": "pkg:node:crypto",
+      "label": "node:crypto",
+      "dir": "(externo)",
+      "ext": "",
+      "lines": 0,
+      "exports": [],
+      "kind": "external",
+      "summary": "módulo de Node",
+      "fanIn": 1,
+      "fanOut": 0,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "external",
+      "community": -1
+    },
+    {
+      "id": "pkg:node:test",
+      "label": "node:test",
+      "dir": "(externo)",
+      "ext": "",
+      "lines": 0,
+      "exports": [],
+      "kind": "external",
+      "summary": "módulo de Node",
+      "fanIn": 0,
+      "fanOut": 0,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "external",
+      "community": -1
+    },
+    {
+      "id": "src/api/health.mjs",
+      "label": "health.mjs",
+      "dir": "src/api",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 3,
+      "loc": 2,
+      "exports": [],
+      "defs": [],
+      "isTest": false,
+      "kind": "file",
+      "summary": "",
+      "fanIn": 1,
+      "fanOut": 1,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "module",
+      "git": {
+        "tracked": true,
+        "commits": 1,
+        "c30": 0,
+        "c90": 0,
+        "c365": 1,
+        "add": 2,
+        "del": 0,
+        "first": "2026-06-26T04:01:41+00:00",
+        "last": "2026-06-26T04:01:41+00:00",
+        "lastT": 1782446501000,
+        "authors": [
+          {
+            "a": 1,
+            "commits": 1,
+            "share": 1
+          }
+        ],
+        "owner": 1,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 18,
+        "idx": [
+          18
+        ],
+        "grow": [
+          [
+            18,
+            2
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.79
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "trend": "estable"
+      },
+      "community": 0,
+      "coverage": "ninguna",
+      "pct": {
+        "churn": 27,
+        "loc": 4,
+        "fanIn": 31,
+        "commits": 25
+      },
+      "outlier": [],
+      "impact": {
+        "capped": false,
+        "direct": 1,
+        "total": 1,
+        "prod": 1,
+        "depth": 1,
+        "levels": [
+          1
+        ],
+        "ids": [
+          "src/index.mjs"
+        ]
+      },
+      "instability": 0.5,
+      "state": "estable",
+      "flags": [],
+      "risk": {
+        "score": 12,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0.17,
+          "churn": 0,
+          "cycle": 0,
+          "untested": 0.58,
+          "owner": 0,
+          "size": 0.01,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/api/orderRoutes.mjs",
+      "label": "orderRoutes.mjs",
+      "dir": "src/api",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 18,
+      "loc": 14,
+      "exports": [
+        "paginate"
+      ],
+      "defs": [
+        {
+          "name": "paginate",
+          "kind": "function",
+          "line": 10,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "",
+      "fanIn": 1,
+      "fanOut": 4,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "module",
+      "git": {
+        "tracked": true,
+        "commits": 4,
+        "c30": 1,
+        "c90": 3,
+        "c365": 4,
+        "add": 17,
+        "del": 0,
+        "first": "2026-06-26T04:01:41+00:00",
+        "last": "2026-09-16T02:01:41+00:00",
+        "lastT": 1789524101000,
+        "authors": [
+          {
+            "a": 1,
+            "commits": 3,
+            "share": 0.75
+          },
+          {
+            "a": 0,
+            "commits": 1,
+            "share": 0.25
+          }
+        ],
+        "owner": 1,
+        "ownerShare": 0.75,
+        "busFactor": 1,
+        "born": 18,
+        "idx": [
+          18,
+          20,
+          23,
+          27
+        ],
+        "grow": [
+          [
+            18,
+            10
+          ],
+          [
+            20,
+            13
+          ],
+          [
+            23,
+            16
+          ],
+          [
+            27,
+            17
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.49
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "trend": "estable"
+      },
+      "community": 2,
+      "coverage": "ninguna",
+      "pct": {
+        "churn": 85,
+        "loc": 81,
+        "fanIn": 31,
+        "commits": 81
+      },
+      "outlier": [
+        "churn"
+      ],
+      "impact": {
+        "capped": false,
+        "direct": 1,
+        "total": 1,
+        "prod": 1,
+        "depth": 1,
+        "levels": [
+          1
+        ],
+        "ids": [
+          "src/index.mjs"
+        ]
+      },
+      "dup": {
+        "lines": 8,
+        "pct": 0.57,
+        "groups": [
+          "d0"
+        ],
+        "sev": "costosa",
+        "cost": 68
+      },
+      "instability": 0.8,
+      "state": "activo",
+      "flags": [
+        "duplicado",
+        "propietario-único"
+      ],
+      "risk": {
+        "score": 43,
+        "level": "medio",
+        "parts": {
+          "fanIn": 0.17,
+          "churn": 0.6,
+          "cycle": 0,
+          "untested": 0.58,
+          "owner": 1,
+          "size": 0.05,
+          "dup": 0.91
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/api/router.mjs",
+      "label": "router.mjs",
+      "dir": "src/api",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 5,
+      "loc": 3,
+      "exports": [
+        "route",
+        "dispatch"
+      ],
+      "defs": [
+        {
+          "name": "routes",
+          "kind": "const",
+          "line": 2,
+          "exported": false
+        },
+        {
+          "name": "route",
+          "kind": "function",
+          "line": 3,
+          "exported": true
+        },
+        {
+          "name": "dispatch",
+          "kind": "function",
+          "line": 4,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "Enrutador mínimo: registra handlers por método y ruta.",
+      "fanIn": 4,
+      "fanOut": 0,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "hub",
+      "git": {
+        "tracked": true,
+        "commits": 1,
+        "c30": 0,
+        "c90": 0,
+        "c365": 1,
+        "add": 4,
+        "del": 0,
+        "first": "2026-06-26T04:01:41+00:00",
+        "last": "2026-06-26T04:01:41+00:00",
+        "lastT": 1782446501000,
+        "authors": [
+          {
+            "a": 1,
+            "commits": 1,
+            "share": 1
+          }
+        ],
+        "owner": 1,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 18,
+        "idx": [
+          18
+        ],
+        "grow": [
+          [
+            18,
+            4
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.79
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "trend": "estable"
+      },
+      "community": 2,
+      "coverage": "ninguna",
+      "pct": {
+        "churn": 27,
+        "loc": 27,
+        "fanIn": 92,
+        "commits": 25
+      },
+      "outlier": [],
+      "impact": {
+        "capped": false,
+        "direct": 4,
+        "total": 4,
+        "prod": 4,
+        "depth": 1,
+        "levels": [
+          4
+        ],
+        "ids": [
+          "src/api/health.mjs",
+          "src/api/orderRoutes.mjs",
+          "src/api/userRoutes.mjs",
+          "src/index.mjs"
+        ]
+      },
+      "instability": 0,
+      "state": "estable",
+      "flags": [
+        "hub",
+        "sin-pruebas"
+      ],
+      "risk": {
+        "score": 28,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0.67,
+          "churn": 0,
+          "cycle": 0,
+          "untested": 0.83,
+          "owner": 0,
+          "size": 0.01,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/api/userRoutes.mjs",
+      "label": "userRoutes.mjs",
+      "dir": "src/api",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 16,
+      "loc": 12,
+      "exports": [
+        "paginate"
+      ],
+      "defs": [
+        {
+          "name": "paginate",
+          "kind": "function",
+          "line": 8,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "",
+      "fanIn": 1,
+      "fanOut": 2,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "module",
+      "git": {
+        "tracked": true,
+        "commits": 5,
+        "c30": 2,
+        "c90": 4,
+        "c365": 5,
+        "add": 15,
+        "del": 0,
+        "first": "2026-06-26T04:01:41+00:00",
+        "last": "2026-09-16T02:01:41+00:00",
+        "lastT": 1789524101000,
+        "authors": [
+          {
+            "a": 1,
+            "commits": 4,
+            "share": 0.8
+          },
+          {
+            "a": 0,
+            "commits": 1,
+            "share": 0.2
+          }
+        ],
+        "owner": 1,
+        "ownerShare": 0.8,
+        "busFactor": 1,
+        "born": 18,
+        "idx": [
+          18,
+          20,
+          23,
+          25,
+          27
+        ],
+        "grow": [
+          [
+            18,
+            9
+          ],
+          [
+            20,
+            11
+          ],
+          [
+            23,
+            13
+          ],
+          [
+            25,
+            14
+          ],
+          [
+            27,
+            15
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.43
+        },
+        "confidence": "media",
+        "months": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          2
+        ],
+        "trend": "subiendo"
+      },
+      "community": 2,
+      "coverage": "ninguna",
+      "pct": {
+        "churn": 94,
+        "loc": 65,
+        "fanIn": 31,
+        "commits": 85
+      },
+      "outlier": [
+        "churn"
+      ],
+      "impact": {
+        "capped": false,
+        "direct": 1,
+        "total": 1,
+        "prod": 1,
+        "depth": 1,
+        "levels": [
+          1
+        ],
+        "ids": [
+          "src/index.mjs"
+        ]
+      },
+      "dup": {
+        "lines": 8,
+        "pct": 0.67,
+        "groups": [
+          "d0"
+        ],
+        "sev": "costosa",
+        "cost": 68
+      },
+      "instability": 0.67,
+      "state": "activo",
+      "flags": [
+        "duplicado",
+        "propietario-único"
+      ],
+      "risk": {
+        "score": 48,
+        "level": "medio",
+        "parts": {
+          "fanIn": 0.17,
+          "churn": 0.8,
+          "cycle": 0,
+          "untested": 0.58,
+          "owner": 1,
+          "size": 0.04,
+          "dup": 1
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/config/settings.mjs",
+      "label": "settings.mjs",
+      "dir": "src/config",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 5,
+      "loc": 3,
+      "exports": [
+        "TAX_RATE",
+        "CURRENCY",
+        "FREE_SHIPPING_FROM"
+      ],
+      "defs": [
+        {
+          "name": "TAX_RATE",
+          "kind": "const",
+          "line": 2,
+          "exported": true
+        },
+        {
+          "name": "CURRENCY",
+          "kind": "const",
+          "line": 3,
+          "exported": true
+        },
+        {
+          "name": "FREE_SHIPPING_FROM",
+          "kind": "const",
+          "line": 4,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "Configuración central de la tienda.",
+      "fanIn": 2,
+      "fanOut": 0,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "leaf",
+      "git": {
+        "tracked": true,
+        "commits": 1,
+        "c30": 0,
+        "c90": 0,
+        "c365": 1,
+        "add": 4,
+        "del": 0,
+        "first": "2026-05-07T07:01:41+00:00",
+        "last": "2026-05-07T07:01:41+00:00",
+        "lastT": 1778137301000,
+        "authors": [
+          {
+            "a": 0,
+            "commits": 1,
+            "share": 1
+          }
+        ],
+        "owner": 0,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 15,
+        "idx": [
+          15
+        ],
+        "grow": [
+          [
+            15,
+            4
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.79
+        },
+        "confidence": "baja",
+        "months": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "trend": "estable"
+      },
+      "community": 1,
+      "coverage": "indirecta",
+      "pct": {
+        "churn": 27,
+        "loc": 27,
+        "fanIn": 58,
+        "commits": 25
+      },
+      "outlier": [],
+      "impact": {
+        "capped": false,
+        "direct": 2,
+        "total": 4,
+        "prod": 4,
+        "depth": 3,
+        "levels": [
+          2,
+          1,
+          1
+        ],
+        "ids": [
+          "src/services/discountService.mjs",
+          "src/services/pricingService.mjs",
+          "src/api/orderRoutes.mjs",
+          "src/index.mjs"
+        ]
+      },
+      "instability": 0,
+      "state": "estable",
+      "flags": [],
+      "risk": {
+        "score": 10,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0.33,
+          "churn": 0,
+          "cycle": 0,
+          "untested": 0.08,
+          "owner": 0,
+          "size": 0.01,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/events/bus.mjs",
+      "label": "bus.mjs",
+      "dir": "src/events",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 5,
+      "loc": 3,
+      "exports": [
+        "on",
+        "emit"
+      ],
+      "defs": [
+        {
+          "name": "handlers",
+          "kind": "const",
+          "line": 2,
+          "exported": false
+        },
+        {
+          "name": "on",
+          "kind": "function",
+          "line": 3,
+          "exported": true
+        },
+        {
+          "name": "emit",
+          "kind": "function",
+          "line": 4,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "Bus de eventos mínimo (publicar / suscribirse).",
+      "fanIn": 3,
+      "fanOut": 0,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "hub",
+      "git": {
+        "tracked": true,
+        "commits": 2,
+        "c30": 1,
+        "c90": 1,
+        "c365": 2,
+        "add": 4,
+        "del": 0,
+        "first": "2026-05-17T06:01:41+00:00",
+        "last": "2026-09-20T08:01:41+00:00",
+        "lastT": 1789891301000,
+        "authors": [
+          {
+            "a": 2,
+            "commits": 2,
+            "share": 1
+          }
+        ],
+        "owner": 2,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 16,
+        "idx": [
+          16,
+          28
+        ],
+        "grow": [
+          [
+            16,
+            3
+          ],
+          [
+            28,
+            4
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.66
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "trend": "estable"
+      },
+      "community": 3,
+      "coverage": "indirecta",
+      "pct": {
+        "churn": 67,
+        "loc": 27,
+        "fanIn": 79,
+        "commits": 60
+      },
+      "outlier": [
+        "churn"
+      ],
+      "impact": {
+        "capped": false,
+        "direct": 3,
+        "total": 8,
+        "prod": 8,
+        "depth": 2,
+        "levels": [
+          3,
+          5
+        ],
+        "ids": [
+          "src/services/notificationService.mjs",
+          "src/services/orderService.mjs",
+          "src/services/userService.mjs",
+          "src/index.mjs",
+          "src/api/orderRoutes.mjs",
+          "src/services/paymentService.mjs",
+          "src/services/reportService.mjs",
+          "src/api/userRoutes.mjs"
+        ]
+      },
+      "instability": 0,
+      "state": "activo",
+      "flags": [
+        "hub"
+      ],
+      "risk": {
+        "score": 19,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0.5,
+          "churn": 0.2,
+          "cycle": 0,
+          "untested": 0.13,
+          "owner": 0,
+          "size": 0.01,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/index.mjs",
+      "label": "index.mjs",
+      "dir": "src",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 17,
+      "loc": 14,
+      "exports": [],
+      "defs": [
+        {
+          "name": "ana",
+          "kind": "const",
+          "line": 12,
+          "exported": false
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "",
+      "fanIn": 0,
+      "fanOut": 8,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "entry",
+      "git": {
+        "tracked": true,
+        "commits": 1,
+        "c30": 0,
+        "c90": 0,
+        "c365": 1,
+        "add": 16,
+        "del": 0,
+        "first": "2025-12-18T08:01:41+00:00",
+        "last": "2025-12-18T08:01:41+00:00",
+        "lastT": 1766044901000,
+        "authors": [
+          {
+            "a": 1,
+            "commits": 1,
+            "share": 1
+          }
+        ],
+        "owner": 1,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 7,
+        "idx": [
+          7
+        ],
+        "grow": [
+          [
+            7,
+            16
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.79
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "trend": "estable"
+      },
+      "community": 0,
+      "coverage": "ninguna",
+      "pct": {
+        "churn": 27,
+        "loc": 81,
+        "fanIn": 8,
+        "commits": 25
+      },
+      "outlier": [],
+      "impact": {
+        "capped": false,
+        "direct": 0,
+        "total": 0,
+        "prod": 0,
+        "depth": 0,
+        "levels": [],
+        "ids": []
+      },
+      "instability": 1,
+      "state": "dormido",
+      "flags": [],
+      "risk": {
+        "score": 0,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0,
+          "churn": 0,
+          "cycle": 0,
+          "untested": 0,
+          "owner": 0,
+          "size": 0.05,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/models/address.mjs",
+      "label": "address.mjs",
+      "dir": "src/models",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 6,
+      "loc": 4,
+      "exports": [
+        "Address"
+      ],
+      "defs": [
+        {
+          "name": "Address",
+          "kind": "class",
+          "line": 2,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "",
+      "fanIn": 0,
+      "fanOut": 0,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "orphan",
+      "git": {
+        "tracked": true,
+        "commits": 1,
+        "c30": 0,
+        "c90": 0,
+        "c365": 1,
+        "add": 5,
+        "del": 0,
+        "first": "2026-04-27T08:01:41+00:00",
+        "last": "2026-04-27T08:01:41+00:00",
+        "lastT": 1777276901000,
+        "authors": [
+          {
+            "a": 1,
+            "commits": 1,
+            "share": 1
+          }
+        ],
+        "owner": 1,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 14,
+        "idx": [
+          14
+        ],
+        "grow": [
+          [
+            14,
+            5
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.79
+        },
+        "confidence": "baja",
+        "months": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "trend": "estable"
+      },
+      "community": 1,
+      "coverage": "ninguna",
+      "pct": {
+        "churn": 27,
+        "loc": 48,
+        "fanIn": 8,
+        "commits": 25
+      },
+      "outlier": [],
+      "impact": {
+        "capped": false,
+        "direct": 0,
+        "total": 0,
+        "prod": 0,
+        "depth": 0,
+        "levels": [],
+        "ids": []
+      },
+      "instability": 0,
+      "state": "huérfano",
+      "flags": [
+        "huérfano"
+      ],
+      "risk": {
+        "score": 0,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0,
+          "churn": 0,
+          "cycle": 0,
+          "untested": 0,
+          "owner": 0,
+          "size": 0.01,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/models/index.mjs",
+      "label": "index.mjs",
+      "dir": "src/models",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 5,
+      "loc": 3,
+      "exports": [
+        "User",
+        "Product",
+        "Order"
+      ],
+      "defs": [],
+      "isTest": false,
+      "kind": "file",
+      "summary": "Barrel: re-exporta los modelos.",
+      "fanIn": 3,
+      "fanOut": 3,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "barrel",
+      "git": {
+        "tracked": true,
+        "commits": 1,
+        "c30": 0,
+        "c90": 0,
+        "c365": 1,
+        "add": 4,
+        "del": 0,
+        "first": "2025-11-13T06:01:41+00:00",
+        "last": "2025-11-13T06:01:41+00:00",
+        "lastT": 1763013701000,
+        "authors": [
+          {
+            "a": 1,
+            "commits": 1,
+            "share": 1
+          }
+        ],
+        "owner": 1,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 2,
+        "idx": [
+          2
+        ],
+        "grow": [
+          [
+            2,
+            4
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.79
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "trend": "estable"
+      },
+      "community": 1,
+      "coverage": "indirecta",
+      "pct": {
+        "churn": 27,
+        "loc": 27,
+        "fanIn": 79,
+        "commits": 25
+      },
+      "outlier": [],
+      "impact": {
+        "capped": false,
+        "direct": 3,
+        "total": 8,
+        "prod": 8,
+        "depth": 2,
+        "levels": [
+          3,
+          5
+        ],
+        "ids": [
+          "src/services/inventoryService.mjs",
+          "src/services/orderService.mjs",
+          "src/services/userService.mjs",
+          "src/index.mjs",
+          "src/api/orderRoutes.mjs",
+          "src/services/paymentService.mjs",
+          "src/services/reportService.mjs",
+          "src/api/userRoutes.mjs"
+        ]
+      },
+      "instability": 0.5,
+      "state": "dormido",
+      "flags": [],
+      "risk": {
+        "score": 15,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0.5,
+          "churn": 0,
+          "cycle": 0,
+          "untested": 0.13,
+          "owner": 0,
+          "size": 0.01,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/models/order.mjs",
+      "label": "order.mjs",
+      "dir": "src/models",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 18,
+      "loc": 14,
+      "exports": [
+        "Order"
+      ],
+      "defs": [
+        {
+          "name": "Order",
+          "kind": "class",
+          "line": 7,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "",
+      "fanIn": 1,
+      "fanOut": 3,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "module",
+      "git": {
+        "tracked": true,
+        "commits": 6,
+        "c30": 1,
+        "c90": 3,
+        "c365": 6,
+        "add": 17,
+        "del": 0,
+        "first": "2025-11-13T06:01:41+00:00",
+        "last": "2026-09-13T03:01:41+00:00",
+        "lastT": 1789268501000,
+        "authors": [
+          {
+            "a": 0,
+            "commits": 5,
+            "share": 0.83
+          },
+          {
+            "a": 1,
+            "commits": 1,
+            "share": 0.17
+          }
+        ],
+        "owner": 0,
+        "ownerShare": 0.83,
+        "busFactor": 1,
+        "born": 2,
+        "idx": [
+          2,
+          15,
+          17,
+          19,
+          22,
+          26
+        ],
+        "grow": [
+          [
+            2,
+            10
+          ],
+          [
+            15,
+            12
+          ],
+          [
+            17,
+            14
+          ],
+          [
+            19,
+            15
+          ],
+          [
+            22,
+            16
+          ],
+          [
+            26,
+            17
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.39
+        },
+        "confidence": "media",
+        "months": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "trend": "estable"
+      },
+      "community": 1,
+      "coverage": "indirecta",
+      "pct": {
+        "churn": 85,
+        "loc": 81,
+        "fanIn": 31,
+        "commits": 92
+      },
+      "outlier": [
+        "churn"
+      ],
+      "impact": {
+        "capped": false,
+        "direct": 1,
+        "total": 9,
+        "prod": 9,
+        "depth": 3,
+        "levels": [
+          1,
+          3,
+          5
+        ],
+        "ids": [
+          "src/models/index.mjs",
+          "src/services/inventoryService.mjs",
+          "src/services/orderService.mjs",
+          "src/services/userService.mjs",
+          "src/index.mjs",
+          "src/api/orderRoutes.mjs",
+          "src/services/paymentService.mjs",
+          "src/services/reportService.mjs",
+          "src/api/userRoutes.mjs"
+        ]
+      },
+      "instability": 0.75,
+      "state": "activo",
+      "flags": [
+        "propietario-único"
+      ],
+      "risk": {
+        "score": 29,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0.17,
+          "churn": 0.6,
+          "cycle": 0,
+          "untested": 0.04,
+          "owner": 1,
+          "size": 0.05,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/models/product.mjs",
+      "label": "product.mjs",
+      "dir": "src/models",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 5,
+      "loc": 3,
+      "exports": [
+        "Product"
+      ],
+      "defs": [
+        {
+          "name": "Product",
+          "kind": "class",
+          "line": 2,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "",
+      "fanIn": 2,
+      "fanOut": 0,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "leaf",
+      "git": {
+        "tracked": true,
+        "commits": 1,
+        "c30": 0,
+        "c90": 0,
+        "c365": 1,
+        "add": 4,
+        "del": 0,
+        "first": "2025-10-29T08:01:41+00:00",
+        "last": "2025-10-29T08:01:41+00:00",
+        "lastT": 1761724901000,
+        "authors": [
+          {
+            "a": 1,
+            "commits": 1,
+            "share": 1
+          }
+        ],
+        "owner": 1,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 0,
+        "idx": [
+          0
+        ],
+        "grow": [
+          [
+            0,
+            4
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.79
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "trend": "estable"
+      },
+      "community": 1,
+      "coverage": "indirecta",
+      "pct": {
+        "churn": 27,
+        "loc": 27,
+        "fanIn": 58,
+        "commits": 25
+      },
+      "outlier": [],
+      "impact": {
+        "capped": false,
+        "direct": 2,
+        "total": 10,
+        "prod": 10,
+        "depth": 3,
+        "levels": [
+          2,
+          3,
+          5
+        ],
+        "ids": [
+          "src/models/index.mjs",
+          "src/models/order.mjs",
+          "src/services/inventoryService.mjs",
+          "src/services/orderService.mjs",
+          "src/services/userService.mjs",
+          "src/index.mjs",
+          "src/api/orderRoutes.mjs",
+          "src/services/paymentService.mjs",
+          "src/services/reportService.mjs",
+          "src/api/userRoutes.mjs"
+        ]
+      },
+      "instability": 0,
+      "state": "dormido",
+      "flags": [],
+      "risk": {
+        "score": 10,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0.33,
+          "churn": 0,
+          "cycle": 0,
+          "untested": 0.08,
+          "owner": 0,
+          "size": 0.01,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/models/user.mjs",
+      "label": "user.mjs",
+      "dir": "src/models",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 6,
+      "loc": 3,
+      "exports": [
+        "User"
+      ],
+      "defs": [
+        {
+          "name": "User",
+          "kind": "class",
+          "line": 3,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "Usuario de la tienda",
+      "fanIn": 2,
+      "fanOut": 0,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "leaf",
+      "git": {
+        "tracked": true,
+        "commits": 1,
+        "c30": 0,
+        "c90": 0,
+        "c365": 1,
+        "add": 4,
+        "del": 0,
+        "first": "2025-10-29T08:01:41+00:00",
+        "last": "2025-10-29T08:01:41+00:00",
+        "lastT": 1761724901000,
+        "authors": [
+          {
+            "a": 1,
+            "commits": 1,
+            "share": 1
+          }
+        ],
+        "owner": 1,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 0,
+        "idx": [
+          0
+        ],
+        "grow": [
+          [
+            0,
+            4
+          ]
+        ],
+        "status": "modified",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.79
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "trend": "estable"
+      },
+      "community": 1,
+      "coverage": "indirecta",
+      "pct": {
+        "churn": 27,
+        "loc": 27,
+        "fanIn": 58,
+        "commits": 25
+      },
+      "outlier": [],
+      "impact": {
+        "capped": false,
+        "direct": 2,
+        "total": 10,
+        "prod": 10,
+        "depth": 3,
+        "levels": [
+          2,
+          3,
+          5
+        ],
+        "ids": [
+          "src/models/index.mjs",
+          "src/models/order.mjs",
+          "src/services/inventoryService.mjs",
+          "src/services/orderService.mjs",
+          "src/services/userService.mjs",
+          "src/index.mjs",
+          "src/api/orderRoutes.mjs",
+          "src/services/paymentService.mjs",
+          "src/services/reportService.mjs",
+          "src/api/userRoutes.mjs"
+        ]
+      },
+      "instability": 0,
+      "state": "modificado",
+      "flags": [
+        "sin-commit"
+      ],
+      "risk": {
+        "score": 10,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0.33,
+          "churn": 0,
+          "cycle": 0,
+          "untested": 0.08,
+          "owner": 0,
+          "size": 0.01,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/services/discountService.mjs",
+      "label": "discountService.mjs",
+      "dir": "src/services",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 6,
+      "loc": 3,
+      "exports": [
+        "volumeDiscount"
+      ],
+      "defs": [
+        {
+          "name": "volumeDiscount",
+          "kind": "function",
+          "line": 5,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "",
+      "fanIn": 0,
+      "fanOut": 2,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "entry",
+      "git": {
+        "tracked": false,
+        "commits": 0,
+        "c30": 0,
+        "c90": 0,
+        "c365": 0,
+        "add": 0,
+        "del": 0,
+        "first": null,
+        "last": null,
+        "lastT": null,
+        "authors": [],
+        "owner": null,
+        "ownerShare": 0,
+        "busFactor": 0,
+        "born": 32,
+        "idx": [],
+        "grow": [],
+        "status": "untracked"
+      },
+      "community": 1,
+      "coverage": "ninguna",
+      "pct": {
+        "churn": 27,
+        "loc": 27,
+        "fanIn": 8,
+        "commits": 2
+      },
+      "outlier": [],
+      "impact": {
+        "capped": false,
+        "direct": 0,
+        "total": 0,
+        "prod": 0,
+        "depth": 0,
+        "levels": [],
+        "ids": []
+      },
+      "instability": 1,
+      "state": "nuevo",
+      "flags": [
+        "sin-commit"
+      ],
+      "risk": {
+        "score": 0,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0,
+          "churn": 0,
+          "cycle": 0,
+          "untested": 0,
+          "owner": 0,
+          "size": 0.01,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/services/inventoryService.mjs",
+      "label": "inventoryService.mjs",
+      "dir": "src/services",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 23,
+      "loc": 20,
+      "exports": [
+        "addProduct",
+        "reserve",
+        "restock"
+      ],
+      "defs": [
+        {
+          "name": "catalog",
+          "kind": "const",
+          "line": 5,
+          "exported": false
+        },
+        {
+          "name": "addProduct",
+          "kind": "function",
+          "line": 6,
+          "exported": true
+        },
+        {
+          "name": "reserve",
+          "kind": "function",
+          "line": 11,
+          "exported": true
+        },
+        {
+          "name": "restock",
+          "kind": "function",
+          "line": 18,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "",
+      "testedBy": [
+        "test/orderService.test.mjs"
+      ],
+      "fanIn": 2,
+      "fanOut": 3,
+      "cycle": false,
+      "tested": true,
+      "role": "module",
+      "git": {
+        "tracked": true,
+        "commits": 2,
+        "c30": 1,
+        "c90": 1,
+        "c365": 2,
+        "add": 16,
+        "del": 0,
+        "first": "2025-11-26T05:01:41+00:00",
+        "last": "2026-09-29T06:01:41+00:00",
+        "lastT": 1790661701000,
+        "authors": [
+          {
+            "a": 0,
+            "commits": 1,
+            "share": 0.5
+          },
+          {
+            "a": 1,
+            "commits": 1,
+            "share": 0.5
+          }
+        ],
+        "owner": 0,
+        "ownerShare": 0.5,
+        "busFactor": 2,
+        "born": 3,
+        "idx": [
+          3,
+          30
+        ],
+        "grow": [
+          [
+            3,
+            10
+          ],
+          [
+            30,
+            16
+          ]
+        ],
+        "status": "modified",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.66
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "trend": "estable"
+      },
+      "community": 0,
+      "coverage": "directa",
+      "pct": {
+        "churn": 67,
+        "loc": 94,
+        "fanIn": 58,
+        "commits": 60
+      },
+      "outlier": [
+        "churn",
+        "loc"
+      ],
+      "impact": {
+        "capped": false,
+        "direct": 2,
+        "total": 5,
+        "prod": 5,
+        "depth": 2,
+        "levels": [
+          2,
+          3
+        ],
+        "ids": [
+          "src/index.mjs",
+          "src/services/orderService.mjs",
+          "src/api/orderRoutes.mjs",
+          "src/services/paymentService.mjs",
+          "src/services/reportService.mjs"
+        ]
+      },
+      "instability": 0.6,
+      "state": "modificado",
+      "flags": [
+        "sin-commit"
+      ],
+      "risk": {
+        "score": 14,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0.33,
+          "churn": 0.2,
+          "cycle": 0,
+          "untested": 0,
+          "owner": 0,
+          "size": 0.07,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/services/notificationService.mjs",
+      "label": "notificationService.mjs",
+      "dir": "src/services",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 17,
+      "loc": 13,
+      "exports": [
+        "startNotifications",
+        "digestLine"
+      ],
+      "defs": [
+        {
+          "name": "startNotifications",
+          "kind": "function",
+          "line": 4,
+          "exported": true
+        },
+        {
+          "name": "digestLine",
+          "kind": "function",
+          "line": 10,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "",
+      "fanIn": 1,
+      "fanOut": 2,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "module",
+      "git": {
+        "tracked": true,
+        "commits": 2,
+        "c30": 1,
+        "c90": 1,
+        "c365": 2,
+        "add": 16,
+        "del": 0,
+        "first": "2026-05-17T06:01:41+00:00",
+        "last": "2026-09-20T08:01:41+00:00",
+        "lastT": 1789891301000,
+        "authors": [
+          {
+            "a": 2,
+            "commits": 2,
+            "share": 1
+          }
+        ],
+        "owner": 2,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 16,
+        "idx": [
+          16,
+          28
+        ],
+        "grow": [
+          [
+            16,
+            10
+          ],
+          [
+            28,
+            16
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.66
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "trend": "estable"
+      },
+      "community": 3,
+      "coverage": "ninguna",
+      "pct": {
+        "churn": 67,
+        "loc": 69,
+        "fanIn": 31,
+        "commits": 60
+      },
+      "outlier": [
+        "churn"
+      ],
+      "impact": {
+        "capped": false,
+        "direct": 1,
+        "total": 1,
+        "prod": 1,
+        "depth": 1,
+        "levels": [
+          1
+        ],
+        "ids": [
+          "src/index.mjs"
+        ]
+      },
+      "dup": {
+        "lines": 7,
+        "pct": 0.54,
+        "groups": [
+          "d1"
+        ],
+        "sev": "latente",
+        "cost": 26
+      },
+      "instability": 0.67,
+      "state": "activo",
+      "flags": [],
+      "risk": {
+        "score": 19,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0.17,
+          "churn": 0.2,
+          "cycle": 0,
+          "untested": 0.58,
+          "owner": 0,
+          "size": 0.04,
+          "dup": 0.32
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/services/orderService.mjs",
+      "label": "orderService.mjs",
+      "dir": "src/services",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 26,
+      "loc": 21,
+      "exports": [
+        "placeOrder",
+        "markPaid",
+        "listOrders",
+        "taxPart"
+      ],
+      "defs": [
+        {
+          "name": "orders",
+          "kind": "const",
+          "line": 8,
+          "exported": false
+        },
+        {
+          "name": "placeOrder",
+          "kind": "function",
+          "line": 9,
+          "exported": true
+        },
+        {
+          "name": "markPaid",
+          "kind": "function",
+          "line": 20,
+          "exported": true
+        },
+        {
+          "name": "listOrders",
+          "kind": "function",
+          "line": 21,
+          "exported": true
+        },
+        {
+          "name": "taxPart",
+          "kind": "function",
+          "line": 23,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "",
+      "tags": [
+        "pagos"
+      ],
+      "testedBy": [
+        "test/orderService.test.mjs"
+      ],
+      "fanIn": 3,
+      "fanOut": 6,
+      "cycle": true,
+      "tested": true,
+      "role": "hub",
+      "git": {
+        "tracked": true,
+        "commits": 9,
+        "c30": 2,
+        "c90": 5,
+        "c365": 9,
+        "add": 25,
+        "del": 0,
+        "first": "2025-12-08T04:01:41+00:00",
+        "last": "2026-10-01T05:01:41+00:00",
+        "lastT": 1790830901000,
+        "authors": [
+          {
+            "a": 0,
+            "commits": 9,
+            "share": 1
+          }
+        ],
+        "owner": 0,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 4,
+        "idx": [
+          4,
+          6,
+          13,
+          17,
+          19,
+          22,
+          24,
+          26,
+          31
+        ],
+        "grow": [
+          [
+            4,
+            15
+          ],
+          [
+            6,
+            16
+          ],
+          [
+            13,
+            17
+          ],
+          [
+            17,
+            19
+          ],
+          [
+            19,
+            20
+          ],
+          [
+            22,
+            21
+          ],
+          [
+            24,
+            23
+          ],
+          [
+            26,
+            24
+          ],
+          [
+            31,
+            25
+          ]
+        ],
+        "status": "clean",
+        "fixes": 2,
+        "fixRate": {
+          "p": 0.22,
+          "lo": 0.06,
+          "hi": 0.55
+        },
+        "confidence": "media",
+        "months": [
+          0,
+          1,
+          0,
+          1,
+          2,
+          2
+        ],
+        "trend": "subiendo"
+      },
+      "community": 0,
+      "coverage": "directa",
+      "pct": {
+        "churn": 98,
+        "loc": 98,
+        "fanIn": 79,
+        "commits": 98
+      },
+      "outlier": [
+        "churn",
+        "loc"
+      ],
+      "impact": {
+        "capped": false,
+        "direct": 3,
+        "total": 4,
+        "prod": 4,
+        "depth": 2,
+        "levels": [
+          3,
+          1
+        ],
+        "ids": [
+          "src/api/orderRoutes.mjs",
+          "src/services/paymentService.mjs",
+          "src/services/reportService.mjs",
+          "src/index.mjs"
+        ]
+      },
+      "instability": 0.67,
+      "state": "activo",
+      "flags": [
+        "ciclo",
+        "hub",
+        "propietario-único",
+        "hotspot"
+      ],
+      "risk": {
+        "score": 62,
+        "level": "alto",
+        "parts": {
+          "fanIn": 0.5,
+          "churn": 1,
+          "cycle": 1,
+          "untested": 0,
+          "owner": 1,
+          "size": 0.07,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/services/paymentService.mjs",
+      "label": "paymentService.mjs",
+      "dir": "src/services",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 14,
+      "loc": 9,
+      "exports": [
+        "charge",
+        "fee"
+      ],
+      "defs": [
+        {
+          "name": "charge",
+          "kind": "function",
+          "line": 5,
+          "exported": true
+        },
+        {
+          "name": "fee",
+          "kind": "function",
+          "line": 11,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "ciclo: orderService <-> paymentService",
+      "tags": [
+        "pagos"
+      ],
+      "fanIn": 1,
+      "fanOut": 3,
+      "cycle": true,
+      "testedBy": [],
+      "tested": false,
+      "role": "module",
+      "git": {
+        "tracked": true,
+        "commits": 6,
+        "c30": 1,
+        "c90": 3,
+        "c365": 6,
+        "add": 13,
+        "del": 0,
+        "first": "2025-12-08T04:01:41+00:00",
+        "last": "2026-09-25T07:01:41+00:00",
+        "lastT": 1790319701000,
+        "authors": [
+          {
+            "a": 0,
+            "commits": 6,
+            "share": 1
+          }
+        ],
+        "owner": 0,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 4,
+        "idx": [
+          4,
+          6,
+          13,
+          19,
+          22,
+          29
+        ],
+        "grow": [
+          [
+            4,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            13,
+            10
+          ],
+          [
+            19,
+            11
+          ],
+          [
+            22,
+            12
+          ],
+          [
+            29,
+            13
+          ]
+        ],
+        "status": "clean",
+        "fixes": 1,
+        "fixRate": {
+          "p": 0.17,
+          "lo": 0.03,
+          "hi": 0.56
+        },
+        "confidence": "media",
+        "months": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "trend": "subiendo"
+      },
+      "community": 0,
+      "coverage": "indirecta",
+      "pct": {
+        "churn": 85,
+        "loc": 60,
+        "fanIn": 31,
+        "commits": 92
+      },
+      "outlier": [
+        "churn"
+      ],
+      "impact": {
+        "capped": false,
+        "direct": 1,
+        "total": 4,
+        "prod": 4,
+        "depth": 3,
+        "levels": [
+          1,
+          2,
+          1
+        ],
+        "ids": [
+          "src/services/orderService.mjs",
+          "src/api/orderRoutes.mjs",
+          "src/services/reportService.mjs",
+          "src/index.mjs"
+        ]
+      },
+      "instability": 0.75,
+      "state": "activo",
+      "flags": [
+        "ciclo",
+        "propietario-único"
+      ],
+      "risk": {
+        "score": 44,
+        "level": "medio",
+        "parts": {
+          "fanIn": 0.17,
+          "churn": 0.6,
+          "cycle": 1,
+          "untested": 0.04,
+          "owner": 1,
+          "size": 0.03,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/services/pricingService.mjs",
+      "label": "pricingService.mjs",
+      "dir": "src/services",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 7,
+      "loc": 5,
+      "exports": [
+        "withTax",
+        "shipping",
+        "label"
+      ],
+      "defs": [
+        {
+          "name": "withTax",
+          "kind": "function",
+          "line": 4,
+          "exported": true
+        },
+        {
+          "name": "shipping",
+          "kind": "function",
+          "line": 5,
+          "exported": true
+        },
+        {
+          "name": "label",
+          "kind": "function",
+          "line": 6,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "",
+      "testedBy": [
+        "test/pricing.test.mjs"
+      ],
+      "fanIn": 2,
+      "fanOut": 2,
+      "cycle": false,
+      "tested": true,
+      "role": "module",
+      "git": {
+        "tracked": true,
+        "commits": 3,
+        "c30": 1,
+        "c90": 1,
+        "c365": 3,
+        "add": 6,
+        "del": 0,
+        "first": "2026-05-07T07:01:41+00:00",
+        "last": "2026-09-13T03:01:41+00:00",
+        "lastT": 1789268501000,
+        "authors": [
+          {
+            "a": 0,
+            "commits": 3,
+            "share": 1
+          }
+        ],
+        "owner": 0,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 15,
+        "idx": [
+          15,
+          17,
+          26
+        ],
+        "grow": [
+          [
+            15,
+            4
+          ],
+          [
+            17,
+            5
+          ],
+          [
+            26,
+            6
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.56
+        },
+        "confidence": "baja",
+        "months": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "trend": "estable"
+      },
+      "community": 1,
+      "coverage": "directa",
+      "pct": {
+        "churn": 67,
+        "loc": 54,
+        "fanIn": 58,
+        "commits": 77
+      },
+      "outlier": [
+        "churn"
+      ],
+      "impact": {
+        "capped": false,
+        "direct": 2,
+        "total": 3,
+        "prod": 3,
+        "depth": 2,
+        "levels": [
+          2,
+          1
+        ],
+        "ids": [
+          "src/api/orderRoutes.mjs",
+          "src/services/discountService.mjs",
+          "src/index.mjs"
+        ]
+      },
+      "instability": 0.5,
+      "state": "activo",
+      "flags": [
+        "propietario-único"
+      ],
+      "risk": {
+        "score": 23,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0.33,
+          "churn": 0.2,
+          "cycle": 0,
+          "untested": 0,
+          "owner": 1,
+          "size": 0.02,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/services/reportService.mjs",
+      "label": "reportService.mjs",
+      "dir": "src/services",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 18,
+      "loc": 14,
+      "exports": [
+        "report",
+        "summaryLine",
+        "taxOf"
+      ],
+      "defs": [
+        {
+          "name": "report",
+          "kind": "function",
+          "line": 4,
+          "exported": true
+        },
+        {
+          "name": "summaryLine",
+          "kind": "function",
+          "line": 10,
+          "exported": true
+        },
+        {
+          "name": "taxOf",
+          "kind": "function",
+          "line": 17,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "",
+      "fanIn": 1,
+      "fanOut": 2,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "module",
+      "git": {
+        "tracked": true,
+        "commits": 1,
+        "c30": 0,
+        "c90": 0,
+        "c365": 1,
+        "add": 17,
+        "del": 0,
+        "first": "2026-02-16T04:01:41+00:00",
+        "last": "2026-02-16T04:01:41+00:00",
+        "lastT": 1771214501000,
+        "authors": [
+          {
+            "a": 1,
+            "commits": 1,
+            "share": 1
+          }
+        ],
+        "owner": 1,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 11,
+        "idx": [
+          11
+        ],
+        "grow": [
+          [
+            11,
+            17
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.79
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "trend": "estable"
+      },
+      "community": 0,
+      "coverage": "ninguna",
+      "pct": {
+        "churn": 27,
+        "loc": 81,
+        "fanIn": 31,
+        "commits": 25
+      },
+      "outlier": [],
+      "impact": {
+        "capped": false,
+        "direct": 1,
+        "total": 1,
+        "prod": 1,
+        "depth": 1,
+        "levels": [
+          1
+        ],
+        "ids": [
+          "src/index.mjs"
+        ]
+      },
+      "dup": {
+        "lines": 7,
+        "pct": 0.5,
+        "groups": [
+          "d1"
+        ],
+        "sev": "latente",
+        "cost": 26
+      },
+      "instability": 0.67,
+      "state": "dormido",
+      "flags": [],
+      "risk": {
+        "score": 14,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0.17,
+          "churn": 0,
+          "cycle": 0,
+          "untested": 0.58,
+          "owner": 0,
+          "size": 0.05,
+          "dup": 0.3
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/services/userService.mjs",
+      "label": "userService.mjs",
+      "dir": "src/services",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 16,
+      "loc": 14,
+      "exports": [
+        "createUser",
+        "getUser"
+      ],
+      "defs": [
+        {
+          "name": "users",
+          "kind": "const",
+          "line": 6,
+          "exported": false
+        },
+        {
+          "name": "createUser",
+          "kind": "function",
+          "line": 7,
+          "exported": true
+        },
+        {
+          "name": "getUser",
+          "kind": "function",
+          "line": 15,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "",
+      "testedBy": [
+        "test/orderService.test.mjs",
+        "test/userService.test.mjs"
+      ],
+      "fanIn": 2,
+      "fanOut": 4,
+      "cycle": false,
+      "tested": true,
+      "role": "module",
+      "git": {
+        "tracked": true,
+        "commits": 2,
+        "c30": 1,
+        "c90": 1,
+        "c365": 2,
+        "add": 15,
+        "del": 0,
+        "first": "2025-11-26T05:01:41+00:00",
+        "last": "2026-09-06T04:01:41+00:00",
+        "lastT": 1788667301000,
+        "authors": [
+          {
+            "a": 0,
+            "commits": 1,
+            "share": 0.5
+          },
+          {
+            "a": 1,
+            "commits": 1,
+            "share": 0.5
+          }
+        ],
+        "owner": 0,
+        "ownerShare": 0.5,
+        "busFactor": 2,
+        "born": 3,
+        "idx": [
+          3,
+          25
+        ],
+        "grow": [
+          [
+            3,
+            9
+          ],
+          [
+            25,
+            15
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.66
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "trend": "estable"
+      },
+      "community": 2,
+      "coverage": "directa",
+      "pct": {
+        "churn": 67,
+        "loc": 81,
+        "fanIn": 58,
+        "commits": 60
+      },
+      "outlier": [
+        "churn"
+      ],
+      "impact": {
+        "capped": false,
+        "direct": 2,
+        "total": 3,
+        "prod": 3,
+        "depth": 2,
+        "levels": [
+          2,
+          1
+        ],
+        "ids": [
+          "src/api/orderRoutes.mjs",
+          "src/api/userRoutes.mjs",
+          "src/index.mjs"
+        ]
+      },
+      "instability": 0.67,
+      "state": "activo",
+      "flags": [],
+      "risk": {
+        "score": 14,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0.33,
+          "churn": 0.2,
+          "cycle": 0,
+          "untested": 0,
+          "owner": 0,
+          "size": 0.05,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/utils/format.mjs",
+      "label": "format.mjs",
+      "dir": "src/utils",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 5,
+      "loc": 3,
+      "exports": [
+        "money",
+        "pad",
+        "stamp"
+      ],
+      "defs": [
+        {
+          "name": "money",
+          "kind": "function",
+          "line": 2,
+          "exported": true
+        },
+        {
+          "name": "pad",
+          "kind": "function",
+          "line": 3,
+          "exported": true
+        },
+        {
+          "name": "stamp",
+          "kind": "const",
+          "line": 4,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "Utilidades de formato. No depende de nadie.",
+      "rec": [
+        {
+          "kind": "directa",
+          "names": [
+            "pad"
+          ],
+          "line": 3
+        }
+      ],
+      "fanIn": 4,
+      "fanOut": 0,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "hub",
+      "git": {
+        "tracked": true,
+        "commits": 2,
+        "c30": 0,
+        "c90": 0,
+        "c365": 2,
+        "add": 4,
+        "del": 0,
+        "first": "2025-10-29T08:01:41+00:00",
+        "last": "2026-01-27T05:01:41+00:00",
+        "lastT": 1769490101000,
+        "authors": [
+          {
+            "a": 1,
+            "commits": 2,
+            "share": 1
+          }
+        ],
+        "owner": 1,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 0,
+        "idx": [
+          0,
+          10
+        ],
+        "grow": [
+          [
+            0,
+            4
+          ]
+        ],
+        "status": "clean",
+        "renamedFrom": [
+          "src/utils/helpers.mjs"
+        ],
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.66
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "trend": "estable"
+      },
+      "community": 0,
+      "coverage": "indirecta",
+      "pct": {
+        "churn": 27,
+        "loc": 27,
+        "fanIn": 92,
+        "commits": 60
+      },
+      "outlier": [],
+      "impact": {
+        "capped": false,
+        "direct": 4,
+        "total": 12,
+        "prod": 12,
+        "depth": 3,
+        "levels": [
+          4,
+          7,
+          1
+        ],
+        "ids": [
+          "src/services/paymentService.mjs",
+          "src/services/pricingService.mjs",
+          "src/services/reportService.mjs",
+          "src/utils/logger.mjs",
+          "src/services/orderService.mjs",
+          "src/api/orderRoutes.mjs",
+          "src/services/discountService.mjs",
+          "src/index.mjs",
+          "src/services/inventoryService.mjs",
+          "src/services/notificationService.mjs",
+          "src/services/userService.mjs",
+          "src/api/userRoutes.mjs"
+        ]
+      },
+      "instability": 0,
+      "state": "dormido",
+      "flags": [
+        "hub",
+        "recursión"
+      ],
+      "risk": {
+        "score": 20,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0.67,
+          "churn": 0,
+          "cycle": 0,
+          "untested": 0.17,
+          "owner": 0,
+          "size": 0.01,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/utils/legacy.mjs",
+      "label": "legacy.mjs",
+      "dir": "src/utils",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 4,
+      "loc": 2,
+      "exports": [
+        "oldFormat"
+      ],
+      "defs": [
+        {
+          "name": "fs",
+          "kind": "const",
+          "line": 2,
+          "exported": false
+        },
+        {
+          "name": "oldFormat",
+          "kind": "function",
+          "line": 3,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "Código viejo que nadie importa (archivo huérfano).",
+      "fanIn": 0,
+      "fanOut": 1,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "orphan",
+      "git": {
+        "tracked": true,
+        "commits": 2,
+        "c30": 0,
+        "c90": 0,
+        "c365": 2,
+        "add": 3,
+        "del": 0,
+        "first": "2026-01-07T07:01:41+00:00",
+        "last": "2026-01-15T06:01:41+00:00",
+        "lastT": 1768456901000,
+        "authors": [
+          {
+            "a": 2,
+            "commits": 2,
+            "share": 1
+          }
+        ],
+        "owner": 2,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 8,
+        "idx": [
+          8,
+          9
+        ],
+        "grow": [
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            3
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.66
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "trend": "estable"
+      },
+      "community": 4,
+      "coverage": "ninguna",
+      "pct": {
+        "churn": 27,
+        "loc": 4,
+        "fanIn": 8,
+        "commits": 60
+      },
+      "outlier": [],
+      "impact": {
+        "capped": false,
+        "direct": 0,
+        "total": 0,
+        "prod": 0,
+        "depth": 0,
+        "levels": [],
+        "ids": []
+      },
+      "instability": 1,
+      "state": "huérfano",
+      "flags": [
+        "huérfano"
+      ],
+      "risk": {
+        "score": 0,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0,
+          "churn": 0,
+          "cycle": 0,
+          "untested": 0,
+          "owner": 0,
+          "size": 0.01,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/utils/logger.mjs",
+      "label": "logger.mjs",
+      "dir": "src/utils",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 7,
+      "loc": 5,
+      "exports": [
+        "logger"
+      ],
+      "defs": [
+        {
+          "name": "logger",
+          "kind": "const",
+          "line": 3,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "",
+      "fanIn": 6,
+      "fanOut": 1,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "hub",
+      "git": {
+        "tracked": true,
+        "commits": 1,
+        "c30": 0,
+        "c90": 0,
+        "c365": 1,
+        "add": 6,
+        "del": 0,
+        "first": "2025-10-29T08:01:41+00:00",
+        "last": "2025-10-29T08:01:41+00:00",
+        "lastT": 1761724901000,
+        "authors": [
+          {
+            "a": 1,
+            "commits": 1,
+            "share": 1
+          }
+        ],
+        "owner": 1,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 0,
+        "idx": [
+          0
+        ],
+        "grow": [
+          [
+            0,
+            6
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.79
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "trend": "estable"
+      },
+      "community": 0,
+      "coverage": "indirecta",
+      "pct": {
+        "churn": 27,
+        "loc": 54,
+        "fanIn": 98,
+        "commits": 25
+      },
+      "outlier": [],
+      "impact": {
+        "capped": false,
+        "direct": 6,
+        "total": 9,
+        "prod": 9,
+        "depth": 2,
+        "levels": [
+          6,
+          3
+        ],
+        "ids": [
+          "src/index.mjs",
+          "src/services/inventoryService.mjs",
+          "src/services/notificationService.mjs",
+          "src/services/orderService.mjs",
+          "src/services/paymentService.mjs",
+          "src/services/userService.mjs",
+          "src/api/orderRoutes.mjs",
+          "src/services/reportService.mjs",
+          "src/api/userRoutes.mjs"
+        ]
+      },
+      "instability": 0.14,
+      "state": "dormido",
+      "flags": [
+        "hub"
+      ],
+      "risk": {
+        "score": 29,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 1,
+          "churn": 0,
+          "cycle": 0,
+          "untested": 0.25,
+          "owner": 0,
+          "size": 0.02,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "src/utils/validate.mjs",
+      "label": "validate.mjs",
+      "dir": "src/utils",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 4,
+      "loc": 3,
+      "exports": [
+        "isEmail",
+        "isPositive",
+        "assert"
+      ],
+      "defs": [
+        {
+          "name": "isEmail",
+          "kind": "function",
+          "line": 1,
+          "exported": true
+        },
+        {
+          "name": "isPositive",
+          "kind": "function",
+          "line": 2,
+          "exported": true
+        },
+        {
+          "name": "assert",
+          "kind": "function",
+          "line": 3,
+          "exported": true
+        }
+      ],
+      "isTest": false,
+      "kind": "file",
+      "summary": "",
+      "fanIn": 3,
+      "fanOut": 0,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "hub",
+      "git": {
+        "tracked": true,
+        "commits": 2,
+        "c30": 1,
+        "c90": 1,
+        "c365": 2,
+        "add": 3,
+        "del": 0,
+        "first": "2025-10-29T08:01:41+00:00",
+        "last": "2026-09-06T04:01:41+00:00",
+        "lastT": 1788667301000,
+        "authors": [
+          {
+            "a": 1,
+            "commits": 2,
+            "share": 1
+          }
+        ],
+        "owner": 1,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 0,
+        "idx": [
+          0,
+          25
+        ],
+        "grow": [
+          [
+            0,
+            2
+          ],
+          [
+            25,
+            3
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.66
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "trend": "estable"
+      },
+      "community": 0,
+      "coverage": "indirecta",
+      "pct": {
+        "churn": 67,
+        "loc": 27,
+        "fanIn": 79,
+        "commits": 60
+      },
+      "outlier": [
+        "churn"
+      ],
+      "impact": {
+        "capped": false,
+        "direct": 3,
+        "total": 8,
+        "prod": 8,
+        "depth": 2,
+        "levels": [
+          3,
+          5
+        ],
+        "ids": [
+          "src/services/inventoryService.mjs",
+          "src/services/orderService.mjs",
+          "src/services/userService.mjs",
+          "src/index.mjs",
+          "src/api/orderRoutes.mjs",
+          "src/services/paymentService.mjs",
+          "src/services/reportService.mjs",
+          "src/api/userRoutes.mjs"
+        ]
+      },
+      "instability": 0,
+      "state": "activo",
+      "flags": [
+        "hub"
+      ],
+      "risk": {
+        "score": 19,
+        "level": "bajo",
+        "parts": {
+          "fanIn": 0.5,
+          "churn": 0.2,
+          "cycle": 0,
+          "untested": 0.13,
+          "owner": 0,
+          "size": 0.01,
+          "dup": 0
+        },
+        "weights": {
+          "fanIn": 0.26,
+          "churn": 0.24,
+          "cycle": 0.15,
+          "untested": 0.13,
+          "owner": 0.09,
+          "size": 0.06,
+          "dup": 0.07
+        }
+      }
+    },
+    {
+      "id": "test/orderService.test.mjs",
+      "label": "orderService.test.mjs",
+      "dir": "test",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 13,
+      "loc": 11,
+      "exports": [],
+      "defs": [],
+      "isTest": true,
+      "kind": "file",
+      "summary": "",
+      "fanIn": 0,
+      "fanOut": 0,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "test",
+      "git": {
+        "tracked": true,
+        "commits": 1,
+        "c30": 0,
+        "c90": 1,
+        "c365": 1,
+        "add": 12,
+        "del": 0,
+        "first": "2026-07-26T08:01:41+00:00",
+        "last": "2026-07-26T08:01:41+00:00",
+        "lastT": 1785052901000,
+        "authors": [
+          {
+            "a": 2,
+            "commits": 1,
+            "share": 1
+          }
+        ],
+        "owner": 2,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 21,
+        "idx": [
+          21
+        ],
+        "grow": [
+          [
+            21,
+            12
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.79
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "trend": "estable"
+      },
+      "community": 0,
+      "coverage": "prueba",
+      "impact": {
+        "capped": false,
+        "direct": 0,
+        "total": 0,
+        "prod": 0,
+        "depth": 0,
+        "levels": [],
+        "ids": []
+      },
+      "instability": 0,
+      "state": "estable",
+      "flags": [],
+      "risk": {
+        "score": 0,
+        "level": "bajo",
+        "parts": {}
+      }
+    },
+    {
+      "id": "test/pricing.test.mjs",
+      "label": "pricing.test.mjs",
+      "dir": "test",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 10,
+      "loc": 8,
+      "exports": [],
+      "defs": [],
+      "isTest": true,
+      "kind": "file",
+      "summary": "",
+      "fanIn": 0,
+      "fanOut": 0,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "test",
+      "git": {
+        "tracked": true,
+        "commits": 1,
+        "c30": 0,
+        "c90": 1,
+        "c365": 1,
+        "add": 9,
+        "del": 0,
+        "first": "2026-07-26T08:01:41+00:00",
+        "last": "2026-07-26T08:01:41+00:00",
+        "lastT": 1785052901000,
+        "authors": [
+          {
+            "a": 2,
+            "commits": 1,
+            "share": 1
+          }
+        ],
+        "owner": 2,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 21,
+        "idx": [
+          21
+        ],
+        "grow": [
+          [
+            21,
+            9
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.79
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "trend": "estable"
+      },
+      "community": 1,
+      "coverage": "prueba",
+      "impact": {
+        "capped": false,
+        "direct": 0,
+        "total": 0,
+        "prod": 0,
+        "depth": 0,
+        "levels": [],
+        "ids": []
+      },
+      "instability": 0,
+      "state": "estable",
+      "flags": [],
+      "risk": {
+        "score": 0,
+        "level": "bajo",
+        "parts": {}
+      }
+    },
+    {
+      "id": "test/userService.test.mjs",
+      "label": "userService.test.mjs",
+      "dir": "test",
+      "lang": "javascript",
+      "ext": "mjs",
+      "lines": 8,
+      "loc": 6,
+      "exports": [],
+      "defs": [],
+      "isTest": true,
+      "kind": "file",
+      "summary": "",
+      "fanIn": 0,
+      "fanOut": 0,
+      "cycle": false,
+      "testedBy": [],
+      "tested": false,
+      "role": "test",
+      "git": {
+        "tracked": true,
+        "commits": 1,
+        "c30": 0,
+        "c90": 0,
+        "c365": 1,
+        "add": 7,
+        "del": 0,
+        "first": "2026-03-18T03:01:41+00:00",
+        "last": "2026-03-18T03:01:41+00:00",
+        "lastT": 1773802901000,
+        "authors": [
+          {
+            "a": 2,
+            "commits": 1,
+            "share": 1
+          }
+        ],
+        "owner": 2,
+        "ownerShare": 1,
+        "busFactor": 1,
+        "born": 12,
+        "idx": [
+          12
+        ],
+        "grow": [
+          [
+            12,
+            7
+          ]
+        ],
+        "status": "clean",
+        "fixes": 0,
+        "fixRate": {
+          "p": 0,
+          "lo": 0,
+          "hi": 0.79
+        },
+        "confidence": "baja",
+        "months": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "trend": "estable"
+      },
+      "community": 2,
+      "coverage": "prueba",
+      "impact": {
+        "capped": false,
+        "direct": 0,
+        "total": 0,
+        "prod": 0,
+        "depth": 0,
+        "levels": [],
+        "ids": []
+      },
+      "instability": 0,
+      "state": "dormido",
+      "flags": [],
+      "risk": {
+        "score": 0,
+        "level": "bajo",
+        "parts": {}
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "src/api/health.mjs→src/api/router.mjs|import",
+      "source": "src/api/health.mjs",
+      "target": "src/api/router.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "route",
+          "local": "route",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "./router.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 2,
+        "refs": 1,
+        "ratio": 0.5
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/api/orderRoutes.mjs→src/api/router.mjs|import",
+      "source": "src/api/orderRoutes.mjs",
+      "target": "src/api/router.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "route",
+          "local": "route",
+          "count": 2
+        }
+      ],
+      "refs": 2,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "./router.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 2,
+        "refs": 2,
+        "ratio": 0.5
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/api/orderRoutes.mjs→src/services/orderService.mjs|import",
+      "source": "src/api/orderRoutes.mjs",
+      "target": "src/services/orderService.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "placeOrder",
+          "local": "placeOrder",
+          "count": 1
+        },
+        {
+          "name": "listOrders",
+          "local": "listOrders",
+          "count": 1
+        }
+      ],
+      "refs": 2,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "../services/orderService.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 2,
+        "exports": 4,
+        "refs": 2,
+        "ratio": 0.5
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/api/orderRoutes.mjs→src/services/pricingService.mjs|import",
+      "source": "src/api/orderRoutes.mjs",
+      "target": "src/services/pricingService.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "label",
+          "local": "label",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        3
+      ],
+      "specs": [
+        "../services/pricingService.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 3,
+        "refs": 1,
+        "ratio": 0.33
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/api/orderRoutes.mjs→src/services/userService.mjs|import",
+      "source": "src/api/orderRoutes.mjs",
+      "target": "src/services/userService.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "getUser",
+          "local": "getUser",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        2
+      ],
+      "specs": [
+        "../services/userService.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 2,
+        "refs": 1,
+        "ratio": 0.5
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/api/userRoutes.mjs→src/api/router.mjs|import",
+      "source": "src/api/userRoutes.mjs",
+      "target": "src/api/router.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "route",
+          "local": "route",
+          "count": 2
+        }
+      ],
+      "refs": 2,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "./router.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 2,
+        "refs": 2,
+        "ratio": 0.5
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/api/userRoutes.mjs→src/services/userService.mjs|import",
+      "source": "src/api/userRoutes.mjs",
+      "target": "src/services/userService.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "createUser",
+          "local": "createUser",
+          "count": 1
+        },
+        {
+          "name": "getUser",
+          "local": "getUser",
+          "count": 1
+        }
+      ],
+      "refs": 2,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "../services/userService.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 2,
+        "exports": 2,
+        "refs": 2,
+        "ratio": 1
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/index.mjs→src/api/health.mjs|import",
+      "source": "src/index.mjs",
+      "target": "src/api/health.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [],
+      "refs": 1,
+      "lines": [
+        2
+      ],
+      "specs": [
+        "./api/health.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 0,
+        "exports": 0,
+        "refs": 1,
+        "ratio": null
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/index.mjs→src/api/orderRoutes.mjs|import",
+      "source": "src/index.mjs",
+      "target": "src/api/orderRoutes.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "./api/orderRoutes.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 0,
+        "exports": 1,
+        "refs": 1,
+        "ratio": 0
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/index.mjs→src/api/router.mjs|import",
+      "source": "src/index.mjs",
+      "target": "src/api/router.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "dispatch",
+          "local": "dispatch",
+          "count": 3
+        }
+      ],
+      "refs": 3,
+      "lines": [
+        3
+      ],
+      "specs": [
+        "./api/router.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 2,
+        "refs": 3,
+        "ratio": 0.5
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/index.mjs→src/api/userRoutes.mjs|import",
+      "source": "src/index.mjs",
+      "target": "src/api/userRoutes.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "./api/userRoutes.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 0,
+        "exports": 1,
+        "refs": 1,
+        "ratio": 0
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/index.mjs→src/services/inventoryService.mjs|import",
+      "source": "src/index.mjs",
+      "target": "src/services/inventoryService.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "addProduct",
+          "local": "addProduct",
+          "count": 2
+        }
+      ],
+      "refs": 2,
+      "lines": [
+        4
+      ],
+      "specs": [
+        "./services/inventoryService.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 3,
+        "refs": 2,
+        "ratio": 0.33
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/index.mjs→src/services/notificationService.mjs|import",
+      "source": "src/index.mjs",
+      "target": "src/services/notificationService.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "startNotifications",
+          "local": "startNotifications",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        5
+      ],
+      "specs": [
+        "./services/notificationService.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 2,
+        "refs": 1,
+        "ratio": 0.5
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/index.mjs→src/services/reportService.mjs|dynamic",
+      "source": "src/index.mjs",
+      "target": "src/services/reportService.mjs",
+      "kind": "dynamic",
+      "origin": "code",
+      "symbols": [],
+      "refs": 1,
+      "lines": [
+        15
+      ],
+      "specs": [
+        "./services/reportService.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 0,
+        "exports": 3,
+        "refs": 1,
+        "ratio": 0
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/index.mjs→src/utils/logger.mjs|import",
+      "source": "src/index.mjs",
+      "target": "src/utils/logger.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "logger",
+          "local": "logger",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        6
+      ],
+      "specs": [
+        "./utils/logger.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 1,
+        "refs": 1,
+        "ratio": 1
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/models/address.mjs→src/models/user.mjs|relation",
+      "source": "src/models/address.mjs",
+      "target": "src/models/user.mjs",
+      "kind": "relation",
+      "origin": "code",
+      "card": "N:1",
+      "label": "pertenece a",
+      "symbols": [],
+      "refs": 0,
+      "lines": [
+        1
+      ],
+      "cycle": false
+    },
+    {
+      "id": "src/models/index.mjs→src/models/order.mjs|reexport",
+      "source": "src/models/index.mjs",
+      "target": "src/models/order.mjs",
+      "kind": "reexport",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "Order",
+          "local": "",
+          "count": 0
+        }
+      ],
+      "refs": 0,
+      "lines": [
+        3
+      ],
+      "specs": [
+        "./order.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 1,
+        "refs": 0,
+        "ratio": 1
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/models/index.mjs→src/models/product.mjs|reexport",
+      "source": "src/models/index.mjs",
+      "target": "src/models/product.mjs",
+      "kind": "reexport",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "Product",
+          "local": "",
+          "count": 0
+        }
+      ],
+      "refs": 0,
+      "lines": [
+        2
+      ],
+      "specs": [
+        "./product.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 1,
+        "refs": 0,
+        "ratio": 1
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/models/index.mjs→src/models/user.mjs|reexport",
+      "source": "src/models/index.mjs",
+      "target": "src/models/user.mjs",
+      "kind": "reexport",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "User",
+          "local": "",
+          "count": 0
+        }
+      ],
+      "refs": 0,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "./user.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 1,
+        "refs": 0,
+        "ratio": 1
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/models/order.mjs→pkg:node:crypto|import",
+      "source": "src/models/order.mjs",
+      "target": "pkg:node:crypto",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "randomUUID",
+          "local": "randomUUID",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "node:crypto"
+      ],
+      "external": true,
+      "cycle": false
+    },
+    {
+      "id": "src/models/order.mjs→src/models/product.mjs|import",
+      "source": "src/models/order.mjs",
+      "target": "src/models/product.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "Product",
+          "local": "Product",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        2
+      ],
+      "specs": [
+        "./product.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 1,
+        "refs": 1,
+        "ratio": 1
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/models/order.mjs→src/models/product.mjs|relation",
+      "source": "src/models/order.mjs",
+      "target": "src/models/product.mjs",
+      "kind": "relation",
+      "origin": "code",
+      "card": "N:M",
+      "label": "contiene",
+      "symbols": [],
+      "refs": 0,
+      "lines": [
+        6
+      ],
+      "declaredBothSides": true,
+      "cycle": false
+    },
+    {
+      "id": "src/models/order.mjs→src/models/user.mjs|import",
+      "source": "src/models/order.mjs",
+      "target": "src/models/user.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "User",
+          "local": "User",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "./user.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 1,
+        "refs": 1,
+        "ratio": 1
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/models/order.mjs→src/models/user.mjs|relation",
+      "source": "src/models/order.mjs",
+      "target": "src/models/user.mjs",
+      "kind": "relation",
+      "origin": "code",
+      "card": "N:1",
+      "label": "pertenece a",
+      "symbols": [],
+      "refs": 0,
+      "lines": [
+        5
+      ],
+      "declaredBothSides": true,
+      "cycle": false
+    },
+    {
+      "id": "src/services/discountService.mjs→src/config/settings.mjs|import",
+      "source": "src/services/discountService.mjs",
+      "target": "src/config/settings.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "FREE_SHIPPING_FROM",
+          "local": "FREE_SHIPPING_FROM",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "../config/settings.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 3,
+        "refs": 1,
+        "ratio": 0.33
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/discountService.mjs→src/services/pricingService.mjs|import",
+      "source": "src/services/discountService.mjs",
+      "target": "src/services/pricingService.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "withTax",
+          "local": "withTax",
+          "count": 2
+        }
+      ],
+      "refs": 2,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "./pricingService.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 3,
+        "refs": 2,
+        "ratio": 0.33
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/inventoryService.mjs→src/models/index.mjs|import",
+      "source": "src/services/inventoryService.mjs",
+      "target": "src/models/index.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "Product",
+          "local": "Product",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "../models/index.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 3,
+        "refs": 1,
+        "ratio": 0.33
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/inventoryService.mjs→src/utils/logger.mjs|import",
+      "source": "src/services/inventoryService.mjs",
+      "target": "src/utils/logger.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "logger",
+          "local": "logger",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "../utils/logger.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 1,
+        "refs": 1,
+        "ratio": 1
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/inventoryService.mjs→src/utils/validate.mjs|import",
+      "source": "src/services/inventoryService.mjs",
+      "target": "src/utils/validate.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "isPositive",
+          "local": "isPositive",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        2
+      ],
+      "specs": [
+        "../utils/validate.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 3,
+        "refs": 1,
+        "ratio": 0.33
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/notificationService.mjs→src/events/bus.mjs|import",
+      "source": "src/services/notificationService.mjs",
+      "target": "src/events/bus.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "on",
+          "local": "on",
+          "count": 2
+        }
+      ],
+      "refs": 2,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "../events/bus.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 2,
+        "refs": 2,
+        "ratio": 0.5
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/notificationService.mjs→src/utils/logger.mjs|import",
+      "source": "src/services/notificationService.mjs",
+      "target": "src/utils/logger.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "logger",
+          "local": "logger",
+          "count": 2
+        }
+      ],
+      "refs": 2,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "../utils/logger.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 1,
+        "refs": 2,
+        "ratio": 1
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/orderService.mjs→src/events/bus.mjs|import",
+      "source": "src/services/orderService.mjs",
+      "target": "src/events/bus.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "emit",
+          "local": "emit",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        5
+      ],
+      "specs": [
+        "../events/bus.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 2,
+        "refs": 1,
+        "ratio": 0.5
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/orderService.mjs→src/models/index.mjs|import",
+      "source": "src/services/orderService.mjs",
+      "target": "src/models/index.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "Order",
+          "local": "Order",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "../models/index.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 3,
+        "refs": 1,
+        "ratio": 0.33
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/orderService.mjs→src/services/inventoryService.mjs|import",
+      "source": "src/services/orderService.mjs",
+      "target": "src/services/inventoryService.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "reserve",
+          "local": "reserve",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "./inventoryService.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 3,
+        "refs": 1,
+        "ratio": 0.33
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/orderService.mjs→src/services/paymentService.mjs|import",
+      "source": "src/services/orderService.mjs",
+      "target": "src/services/paymentService.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "charge",
+          "local": "charge",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        2
+      ],
+      "specs": [
+        "./paymentService.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 2,
+        "refs": 1,
+        "ratio": 0.5
+      },
+      "cycle": true
+    },
+    {
+      "id": "src/services/orderService.mjs→src/utils/logger.mjs|import",
+      "source": "src/services/orderService.mjs",
+      "target": "src/utils/logger.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "logger",
+          "local": "logger",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        3
+      ],
+      "specs": [
+        "../utils/logger.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 1,
+        "refs": 1,
+        "ratio": 1
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/orderService.mjs→src/utils/validate.mjs|import",
+      "source": "src/services/orderService.mjs",
+      "target": "src/utils/validate.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "assert",
+          "local": "assert",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        4
+      ],
+      "specs": [
+        "../utils/validate.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 3,
+        "refs": 1,
+        "ratio": 0.33
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/paymentService.mjs→src/services/orderService.mjs|import",
+      "source": "src/services/paymentService.mjs",
+      "target": "src/services/orderService.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "markPaid",
+          "local": "markPaid",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        2
+      ],
+      "specs": [
+        "./orderService.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 4,
+        "refs": 1,
+        "ratio": 0.25
+      },
+      "cycle": true
+    },
+    {
+      "id": "src/services/paymentService.mjs→src/utils/format.mjs|import",
+      "source": "src/services/paymentService.mjs",
+      "target": "src/utils/format.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "money",
+          "local": "money",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "../utils/format.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 3,
+        "refs": 1,
+        "ratio": 0.33
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/paymentService.mjs→src/utils/logger.mjs|import",
+      "source": "src/services/paymentService.mjs",
+      "target": "src/utils/logger.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "logger",
+          "local": "logger",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "../utils/logger.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 1,
+        "refs": 1,
+        "ratio": 1
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/pricingService.mjs→src/config/settings.mjs|import",
+      "source": "src/services/pricingService.mjs",
+      "target": "src/config/settings.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "TAX_RATE",
+          "local": "TAX_RATE",
+          "count": 1
+        },
+        {
+          "name": "FREE_SHIPPING_FROM",
+          "local": "FREE_SHIPPING_FROM",
+          "count": 1
+        }
+      ],
+      "refs": 2,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "../config/settings.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 2,
+        "exports": 3,
+        "refs": 2,
+        "ratio": 0.67
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/pricingService.mjs→src/utils/format.mjs|import",
+      "source": "src/services/pricingService.mjs",
+      "target": "src/utils/format.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "money",
+          "local": "money",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "../utils/format.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 3,
+        "refs": 1,
+        "ratio": 0.33
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/reportService.mjs→src/services/orderService.mjs|import",
+      "source": "src/services/reportService.mjs",
+      "target": "src/services/orderService.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "listOrders",
+          "local": "listOrders",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "./orderService.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 4,
+        "refs": 1,
+        "ratio": 0.25
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/reportService.mjs→src/utils/format.mjs|import",
+      "source": "src/services/reportService.mjs",
+      "target": "src/utils/format.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "money",
+          "local": "money",
+          "count": 5
+        }
+      ],
+      "refs": 5,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "../utils/format.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 3,
+        "refs": 5,
+        "ratio": 0.33
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/userService.mjs→src/events/bus.mjs|import",
+      "source": "src/services/userService.mjs",
+      "target": "src/events/bus.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "emit",
+          "local": "emit",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        3
+      ],
+      "specs": [
+        "../events/bus.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 2,
+        "refs": 1,
+        "ratio": 0.5
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/userService.mjs→src/models/index.mjs|import",
+      "source": "src/services/userService.mjs",
+      "target": "src/models/index.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "User",
+          "local": "User",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "../models/index.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 3,
+        "refs": 1,
+        "ratio": 0.33
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/userService.mjs→src/utils/logger.mjs|import",
+      "source": "src/services/userService.mjs",
+      "target": "src/utils/logger.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "logger",
+          "local": "logger",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "../utils/logger.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 1,
+        "refs": 1,
+        "ratio": 1
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/services/userService.mjs→src/utils/validate.mjs|import",
+      "source": "src/services/userService.mjs",
+      "target": "src/utils/validate.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "isEmail",
+          "local": "isEmail",
+          "count": 1
+        },
+        {
+          "name": "assert",
+          "local": "assert",
+          "count": 1
+        }
+      ],
+      "refs": 2,
+      "lines": [
+        2
+      ],
+      "specs": [
+        "../utils/validate.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 2,
+        "exports": 3,
+        "refs": 2,
+        "ratio": 0.67
+      },
+      "cycle": false
+    },
+    {
+      "id": "src/utils/legacy.mjs→pkg:fs|require",
+      "source": "src/utils/legacy.mjs",
+      "target": "pkg:fs",
+      "kind": "require",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "default",
+          "local": "fs",
+          "count": 3
+        }
+      ],
+      "refs": 3,
+      "lines": [
+        2
+      ],
+      "specs": [
+        "fs"
+      ],
+      "external": true,
+      "cycle": false
+    },
+    {
+      "id": "src/utils/logger.mjs→src/utils/format.mjs|import",
+      "source": "src/utils/logger.mjs",
+      "target": "src/utils/format.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "stamp",
+          "local": "stamp",
+          "count": 2
+        }
+      ],
+      "refs": 2,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "./format.mjs"
+      ],
+      "external": false,
+      "card": {
+        "symbols": 1,
+        "exports": 3,
+        "refs": 2,
+        "ratio": 0.33
+      },
+      "cycle": false
+    },
+    {
+      "id": "test/orderService.test.mjs→pkg:node:assert|import",
+      "source": "test/orderService.test.mjs",
+      "target": "pkg:node:assert",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "default",
+          "local": "assert",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "node:assert"
+      ],
+      "external": true,
+      "fromTest": true,
+      "cycle": false
+    },
+    {
+      "id": "test/orderService.test.mjs→pkg:node:test|import",
+      "source": "test/orderService.test.mjs",
+      "target": "pkg:node:test",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "default",
+          "local": "test",
+          "count": 2
+        }
+      ],
+      "refs": 2,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "node:test"
+      ],
+      "external": true,
+      "fromTest": true,
+      "cycle": false
+    },
+    {
+      "id": "test/orderService.test.mjs→src/services/inventoryService.mjs|import",
+      "source": "test/orderService.test.mjs",
+      "target": "src/services/inventoryService.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "addProduct",
+          "local": "addProduct",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        3
+      ],
+      "specs": [
+        "../src/services/inventoryService.mjs"
+      ],
+      "external": false,
+      "fromTest": true,
+      "card": {
+        "symbols": 1,
+        "exports": 3,
+        "refs": 1,
+        "ratio": 0.33
+      },
+      "cycle": false
+    },
+    {
+      "id": "test/orderService.test.mjs→src/services/orderService.mjs|import",
+      "source": "test/orderService.test.mjs",
+      "target": "src/services/orderService.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "placeOrder",
+          "local": "placeOrder",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        4
+      ],
+      "specs": [
+        "../src/services/orderService.mjs"
+      ],
+      "external": false,
+      "fromTest": true,
+      "card": {
+        "symbols": 1,
+        "exports": 4,
+        "refs": 1,
+        "ratio": 0.25
+      },
+      "cycle": false
+    },
+    {
+      "id": "test/orderService.test.mjs→src/services/userService.mjs|import",
+      "source": "test/orderService.test.mjs",
+      "target": "src/services/userService.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "createUser",
+          "local": "createUser",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        2
+      ],
+      "specs": [
+        "../src/services/userService.mjs"
+      ],
+      "external": false,
+      "fromTest": true,
+      "card": {
+        "symbols": 1,
+        "exports": 2,
+        "refs": 1,
+        "ratio": 0.5
+      },
+      "cycle": false
+    },
+    {
+      "id": "test/pricing.test.mjs→pkg:node:assert|import",
+      "source": "test/pricing.test.mjs",
+      "target": "pkg:node:assert",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "default",
+          "local": "assert",
+          "count": 3
+        }
+      ],
+      "refs": 3,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "node:assert"
+      ],
+      "external": true,
+      "fromTest": true,
+      "cycle": false
+    },
+    {
+      "id": "test/pricing.test.mjs→pkg:node:test|import",
+      "source": "test/pricing.test.mjs",
+      "target": "pkg:node:test",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "default",
+          "local": "test",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "node:test"
+      ],
+      "external": true,
+      "fromTest": true,
+      "cycle": false
+    },
+    {
+      "id": "test/pricing.test.mjs→src/services/pricingService.mjs|import",
+      "source": "test/pricing.test.mjs",
+      "target": "src/services/pricingService.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "withTax",
+          "local": "withTax",
+          "count": 1
+        },
+        {
+          "name": "shipping",
+          "local": "shipping",
+          "count": 2
+        }
+      ],
+      "refs": 3,
+      "lines": [
+        2
+      ],
+      "specs": [
+        "../src/services/pricingService.mjs"
+      ],
+      "external": false,
+      "fromTest": true,
+      "card": {
+        "symbols": 2,
+        "exports": 3,
+        "refs": 3,
+        "ratio": 0.67
+      },
+      "cycle": false
+    },
+    {
+      "id": "test/userService.test.mjs→pkg:node:assert|import",
+      "source": "test/userService.test.mjs",
+      "target": "pkg:node:assert",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "default",
+          "local": "assert",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "node:assert"
+      ],
+      "external": true,
+      "fromTest": true,
+      "cycle": false
+    },
+    {
+      "id": "test/userService.test.mjs→pkg:node:test|import",
+      "source": "test/userService.test.mjs",
+      "target": "pkg:node:test",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "default",
+          "local": "test",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        1
+      ],
+      "specs": [
+        "node:test"
+      ],
+      "external": true,
+      "fromTest": true,
+      "cycle": false
+    },
+    {
+      "id": "test/userService.test.mjs→src/services/userService.mjs|import",
+      "source": "test/userService.test.mjs",
+      "target": "src/services/userService.mjs",
+      "kind": "import",
+      "origin": "code",
+      "symbols": [
+        {
+          "name": "createUser",
+          "local": "createUser",
+          "count": 1
+        }
+      ],
+      "refs": 1,
+      "lines": [
+        2
+      ],
+      "specs": [
+        "../src/services/userService.mjs"
+      ],
+      "external": false,
+      "fromTest": true,
+      "card": {
+        "symbols": 1,
+        "exports": 2,
+        "refs": 1,
+        "ratio": 0.5
+      },
+      "cycle": false
+    }
+  ],
+  "cycles": [
+    [
+      "src/services/paymentService.mjs",
+      "src/services/orderService.mjs"
+    ]
+  ],
+  "warnings": [],
+  "authors": [
+    "Marco Díaz",
+    "Ana Ruiz",
+    "Lucía Torres"
+  ],
+  "timeline": [
+    {
+      "i": 0,
+      "h": "c045333",
+      "a": 1,
+      "d": "2025-10-29T08:01:41+00:00",
+      "t": 1761724901000,
+      "m": "Estructura inicial del proyecto",
+      "add": 20,
+      "del": 0,
+      "files": [
+        "src/models/product.mjs",
+        "src/models/user.mjs",
+        "src/utils/format.mjs",
+        "src/utils/logger.mjs",
+        "src/utils/validate.mjs"
+      ],
+      "added": [
+        "src/models/product.mjs",
+        "src/models/user.mjs",
+        "src/utils/format.mjs",
+        "src/utils/logger.mjs",
+        "src/utils/validate.mjs"
+      ],
+      "nf": 5,
+      "loc": 20
+    },
+    {
+      "i": 1,
+      "h": "8663119",
+      "a": 2,
+      "d": "2025-11-06T07:01:41+00:00",
+      "t": 1762412501000,
+      "m": "Prueba de conexión a base de datos",
+      "add": 2,
+      "del": 0,
+      "files": [],
+      "added": [],
+      "nf": 6,
+      "loc": 22
+    },
+    {
+      "i": 2,
+      "h": "0eb3bad",
+      "a": 1,
+      "d": "2025-11-13T06:01:41+00:00",
+      "t": 1763013701000,
+      "m": "Modelo de órdenes",
+      "add": 14,
+      "del": 0,
+      "files": [
+        "src/models/index.mjs",
+        "src/models/order.mjs"
+      ],
+      "added": [
+        "src/models/index.mjs",
+        "src/models/order.mjs"
+      ],
+      "nf": 8,
+      "loc": 36
+    },
+    {
+      "i": 3,
+      "h": "340f85d",
+      "a": 0,
+      "d": "2025-11-26T05:01:41+00:00",
+      "t": 1764133301000,
+      "m": "Servicios de usuarios e inventario",
+      "add": 19,
+      "del": 0,
+      "files": [
+        "src/services/inventoryService.mjs",
+        "src/services/userService.mjs"
+      ],
+      "added": [
+        "src/services/inventoryService.mjs",
+        "src/services/userService.mjs"
+      ],
+      "nf": 10,
+      "loc": 55
+    },
+    {
+      "i": 4,
+      "h": "b2e917e",
+      "a": 0,
+      "d": "2025-12-08T04:01:41+00:00",
+      "t": 1765166501000,
+      "m": "Orden y pago",
+      "add": 23,
+      "del": 0,
+      "files": [
+        "src/services/orderService.mjs",
+        "src/services/paymentService.mjs"
+      ],
+      "added": [
+        "src/services/orderService.mjs",
+        "src/services/paymentService.mjs"
+      ],
+      "nf": 12,
+      "loc": 78
+    },
+    {
+      "i": 5,
+      "h": "2cd795a",
+      "a": 2,
+      "d": "2025-12-10T03:01:41+00:00",
+      "t": 1765335701000,
+      "m": "Quitar prueba de base de datos",
+      "add": 0,
+      "del": 0,
+      "files": [],
+      "added": [],
+      "nf": 11,
+      "loc": 78
+    },
+    {
+      "i": 6,
+      "h": "fa736da",
+      "a": 0,
+      "d": "2025-12-13T02:01:41+00:00",
+      "t": 1765591301000,
+      "m": "Corrige el pago de la orden",
+      "add": 2,
+      "del": 0,
+      "files": [
+        "src/services/orderService.mjs",
+        "src/services/paymentService.mjs"
+      ],
+      "added": [],
+      "nf": 11,
+      "loc": 80
+    },
+    {
+      "i": 7,
+      "h": "f044d98",
+      "a": 1,
+      "d": "2025-12-18T08:01:41+00:00",
+      "t": 1766044901000,
+      "m": "Punto de entrada",
+      "add": 16,
+      "del": 0,
+      "files": [
+        "src/index.mjs"
+      ],
+      "added": [
+        "src/index.mjs"
+      ],
+      "nf": 12,
+      "loc": 96
+    },
+    {
+      "i": 8,
+      "h": "04a5ed8",
+      "a": 2,
+      "d": "2026-01-07T07:01:41+00:00",
+      "t": 1767769301000,
+      "m": "Helper de compatibilidad",
+      "add": 2,
+      "del": 0,
+      "files": [
+        "src/utils/legacy.mjs"
+      ],
+      "added": [
+        "src/utils/legacy.mjs"
+      ],
+      "nf": 13,
+      "loc": 98
+    },
+    {
+      "i": 9,
+      "h": "40a3c96",
+      "a": 2,
+      "d": "2026-01-15T06:01:41+00:00",
+      "t": 1768456901000,
+      "m": "Ajuste del helper de compatibilidad",
+      "add": 1,
+      "del": 0,
+      "files": [
+        "src/utils/legacy.mjs"
+      ],
+      "added": [],
+      "nf": 13,
+      "loc": 99
+    },
+    {
+      "i": 10,
+      "h": "ee859a9",
+      "a": 1,
+      "d": "2026-01-27T05:01:41+00:00",
+      "t": 1769490101000,
+      "m": "Renombra helpers a format",
+      "add": 0,
+      "del": 0,
+      "files": [
+        "src/utils/format.mjs"
+      ],
+      "added": [],
+      "nf": 13,
+      "loc": 99
+    },
+    {
+      "i": 11,
+      "h": "8a87510",
+      "a": 1,
+      "d": "2026-02-16T04:01:41+00:00",
+      "t": 1771214501000,
+      "m": "Reporte de órdenes",
+      "add": 17,
+      "del": 0,
+      "files": [
+        "src/services/reportService.mjs"
+      ],
+      "added": [
+        "src/services/reportService.mjs"
+      ],
+      "nf": 14,
+      "loc": 116
+    },
+    {
+      "i": 12,
+      "h": "0406158",
+      "a": 2,
+      "d": "2026-03-18T03:01:41+00:00",
+      "t": 1773802901000,
+      "m": "Pruebas de usuarios",
+      "add": 7,
+      "del": 0,
+      "files": [
+        "test/userService.test.mjs"
+      ],
+      "added": [
+        "test/userService.test.mjs"
+      ],
+      "nf": 15,
+      "loc": 123
+    },
+    {
+      "i": 13,
+      "h": "0873bd1",
+      "a": 0,
+      "d": "2026-03-28T02:01:41+00:00",
+      "t": 1774663301000,
+      "m": "Ajusta cálculo de totales",
+      "add": 2,
+      "del": 0,
+      "files": [
+        "src/services/orderService.mjs",
+        "src/services/paymentService.mjs"
+      ],
+      "added": [],
+      "nf": 15,
+      "loc": 125
+    },
+    {
+      "i": 14,
+      "h": "f88cd92",
+      "a": 1,
+      "d": "2026-04-27T08:01:41+00:00",
+      "t": 1777276901000,
+      "m": "Direcciones de envío",
+      "add": 5,
+      "del": 0,
+      "files": [
+        "src/models/address.mjs"
+      ],
+      "added": [
+        "src/models/address.mjs"
+      ],
+      "nf": 16,
+      "loc": 130
+    },
+    {
+      "i": 15,
+      "h": "bbf0ba9",
+      "a": 0,
+      "d": "2026-05-07T07:01:41+00:00",
+      "t": 1778137301000,
+      "m": "Configuración e impuestos",
+      "add": 10,
+      "del": 0,
+      "files": [
+        "src/config/settings.mjs",
+        "src/models/order.mjs",
+        "src/services/pricingService.mjs"
+      ],
+      "added": [
+        "src/config/settings.mjs",
+        "src/services/pricingService.mjs"
+      ],
+      "nf": 18,
+      "loc": 140
+    },
+    {
+      "i": 16,
+      "h": "657d58f",
+      "a": 2,
+      "d": "2026-05-17T06:01:41+00:00",
+      "t": 1778997701000,
+      "m": "Bus de eventos y notificaciones",
+      "add": 13,
+      "del": 0,
+      "files": [
+        "src/events/bus.mjs",
+        "src/services/notificationService.mjs"
+      ],
+      "added": [
+        "src/events/bus.mjs",
+        "src/services/notificationService.mjs"
+      ],
+      "nf": 20,
+      "loc": 153
+    },
+    {
+      "i": 17,
+      "h": "ff5f8da",
+      "a": 0,
+      "d": "2026-06-06T05:01:41+00:00",
+      "t": 1780722101000,
+      "m": "Envío gratis sobre el umbral",
+      "add": 5,
+      "del": 0,
+      "files": [
+        "src/models/order.mjs",
+        "src/services/orderService.mjs",
+        "src/services/pricingService.mjs"
+      ],
+      "added": [],
+      "nf": 20,
+      "loc": 158
+    },
+    {
+      "i": 18,
+      "h": "b8892d3",
+      "a": 1,
+      "d": "2026-06-26T04:01:41+00:00",
+      "t": 1782446501000,
+      "m": "API: enrutador y rutas",
+      "add": 25,
+      "del": 0,
+      "files": [
+        "src/api/health.mjs",
+        "src/api/orderRoutes.mjs",
+        "src/api/router.mjs",
+        "src/api/userRoutes.mjs"
+      ],
+      "added": [
+        "src/api/health.mjs",
+        "src/api/orderRoutes.mjs",
+        "src/api/router.mjs",
+        "src/api/userRoutes.mjs"
+      ],
+      "nf": 24,
+      "loc": 183
+    },
+    {
+      "i": 19,
+      "h": "65765d3",
+      "a": 0,
+      "d": "2026-07-11T03:01:41+00:00",
+      "t": 1783738901000,
+      "m": "Precios con impuesto en la orden",
+      "add": 3,
+      "del": 0,
+      "files": [
+        "src/models/order.mjs",
+        "src/services/orderService.mjs",
+        "src/services/paymentService.mjs"
+      ],
+      "added": [],
+      "nf": 24,
+      "loc": 186
+    },
+    {
+      "i": 20,
+      "h": "c1cad8e",
+      "a": 1,
+      "d": "2026-07-21T02:01:41+00:00",
+      "t": 1784599301000,
+      "m": "Paginación en la API",
+      "add": 5,
+      "del": 0,
+      "files": [
+        "src/api/orderRoutes.mjs",
+        "src/api/userRoutes.mjs"
+      ],
+      "added": [],
+      "nf": 24,
+      "loc": 191
+    },
+    {
+      "i": 21,
+      "h": "a27866b",
+      "a": 2,
+      "d": "2026-07-26T08:01:41+00:00",
+      "t": 1785052901000,
+      "m": "Pruebas de órdenes y precios",
+      "add": 21,
+      "del": 0,
+      "files": [
+        "test/orderService.test.mjs",
+        "test/pricing.test.mjs"
+      ],
+      "added": [
+        "test/orderService.test.mjs",
+        "test/pricing.test.mjs"
+      ],
+      "nf": 26,
+      "loc": 212
+    },
+    {
+      "i": 22,
+      "h": "26d832d",
+      "a": 0,
+      "d": "2026-08-10T07:01:41+00:00",
+      "t": 1786345301000,
+      "m": "Descuentos en la orden",
+      "add": 3,
+      "del": 0,
+      "files": [
+        "src/models/order.mjs",
+        "src/services/orderService.mjs",
+        "src/services/paymentService.mjs"
+      ],
+      "added": [],
+      "nf": 26,
+      "loc": 215
+    },
+    {
+      "i": 23,
+      "h": "da09d4f",
+      "a": 0,
+      "d": "2026-08-20T06:01:41+00:00",
+      "t": 1787205701000,
+      "m": "Paginación: límite máximo",
+      "add": 5,
+      "del": 0,
+      "files": [
+        "src/api/orderRoutes.mjs",
+        "src/api/userRoutes.mjs"
+      ],
+      "added": [],
+      "nf": 26,
+      "loc": 220
+    },
+    {
+      "i": 24,
+      "h": "3c109d3",
+      "a": 0,
+      "d": "2026-08-25T05:01:41+00:00",
+      "t": 1787634101000,
+      "m": "Reintentos de cobro",
+      "add": 2,
+      "del": 0,
+      "files": [
+        "src/services/orderService.mjs"
+      ],
+      "added": [],
+      "nf": 26,
+      "loc": 222
+    },
+    {
+      "i": 25,
+      "h": "aed7cb3",
+      "a": 1,
+      "d": "2026-09-06T04:01:41+00:00",
+      "t": 1788667301000,
+      "m": "Valida correos en usuarios",
+      "add": 8,
+      "del": 0,
+      "files": [
+        "src/api/userRoutes.mjs",
+        "src/services/userService.mjs",
+        "src/utils/validate.mjs"
+      ],
+      "added": [],
+      "nf": 26,
+      "loc": 230
+    },
+    {
+      "i": 26,
+      "h": "22a0d3c",
+      "a": 0,
+      "d": "2026-09-13T03:01:41+00:00",
+      "t": 1789268501000,
+      "m": "Redondeo de totales",
+      "add": 3,
+      "del": 0,
+      "files": [
+        "src/models/order.mjs",
+        "src/services/orderService.mjs",
+        "src/services/pricingService.mjs"
+      ],
+      "added": [],
+      "nf": 26,
+      "loc": 233
+    },
+    {
+      "i": 27,
+      "h": "aab0d53",
+      "a": 1,
+      "d": "2026-09-16T02:01:41+00:00",
+      "t": 1789524101000,
+      "m": "Paginación: totales y navegación",
+      "add": 2,
+      "del": 0,
+      "files": [
+        "src/api/orderRoutes.mjs",
+        "src/api/userRoutes.mjs"
+      ],
+      "added": [],
+      "nf": 26,
+      "loc": 235
+    },
+    {
+      "i": 28,
+      "h": "8b5caa2",
+      "a": 2,
+      "d": "2026-09-20T08:01:41+00:00",
+      "t": 1789891301000,
+      "m": "Notificaciones por evento",
+      "add": 7,
+      "del": 0,
+      "files": [
+        "src/events/bus.mjs",
+        "src/services/notificationService.mjs"
+      ],
+      "added": [],
+      "nf": 26,
+      "loc": 242
+    },
+    {
+      "i": 29,
+      "h": "fbb61b2",
+      "a": 0,
+      "d": "2026-09-25T07:01:41+00:00",
+      "t": 1790319701000,
+      "m": "Emite evento al pagar",
+      "add": 1,
+      "del": 0,
+      "files": [
+        "src/services/paymentService.mjs"
+      ],
+      "added": [],
+      "nf": 26,
+      "loc": 243
+    },
+    {
+      "i": 30,
+      "h": "1f734b1",
+      "a": 1,
+      "d": "2026-09-29T06:01:41+00:00",
+      "t": 1790661701000,
+      "m": "Stock: validaciones",
+      "add": 6,
+      "del": 0,
+      "files": [
+        "src/services/inventoryService.mjs"
+      ],
+      "added": [],
+      "nf": 26,
+      "loc": 249
+    },
+    {
+      "i": 31,
+      "h": "019e11b",
+      "a": 0,
+      "d": "2026-10-01T05:01:41+00:00",
+      "t": 1790830901000,
+      "m": "Hotfix en el estado de pago",
+      "add": 1,
+      "del": 0,
+      "files": [
+        "src/services/orderService.mjs"
+      ],
+      "added": [],
+      "nf": 26,
+      "loc": 250
+    }
+  ],
+  "coChange": [
+    {
+      "a": "src/services/orderService.mjs",
+      "b": "src/services/paymentService.mjs",
+      "count": 5,
+      "strength": 0.83,
+      "support": 0.16,
+      "confAB": 0.56,
+      "confBA": 0.83,
+      "lift": 2.96,
+      "hidden": false
+    },
+    {
+      "a": "src/api/orderRoutes.mjs",
+      "b": "src/api/userRoutes.mjs",
+      "count": 4,
+      "strength": 1,
+      "support": 0.13,
+      "confAB": 1,
+      "confBA": 0.8,
+      "lift": 6.4,
+      "hidden": true
+    },
+    {
+      "a": "src/models/order.mjs",
+      "b": "src/services/pricingService.mjs",
+      "count": 3,
+      "strength": 1,
+      "support": 0.09,
+      "confAB": 0.5,
+      "confBA": 1,
+      "lift": 5.33,
+      "hidden": true
+    },
+    {
+      "a": "src/models/order.mjs",
+      "b": "src/services/orderService.mjs",
+      "count": 4,
+      "strength": 0.67,
+      "support": 0.13,
+      "confAB": 0.67,
+      "confBA": 0.44,
+      "lift": 2.37,
+      "hidden": true
+    },
+    {
+      "a": "src/events/bus.mjs",
+      "b": "src/services/notificationService.mjs",
+      "count": 2,
+      "strength": 1,
+      "support": 0.06,
+      "confAB": 1,
+      "confBA": 1,
+      "lift": 16,
+      "hidden": false
+    },
+    {
+      "a": "src/services/orderService.mjs",
+      "b": "src/services/pricingService.mjs",
+      "count": 2,
+      "strength": 0.67,
+      "support": 0.06,
+      "confAB": 0.22,
+      "confBA": 0.67,
+      "lift": 2.37,
+      "hidden": true
+    }
+  ],
+  "communities": [
+    {
+      "id": 0,
+      "name": "orderService +8",
+      "size": 9,
+      "cohesion": 0.51,
+      "lead": "src/services/orderService.mjs",
+      "files": [
+        "src/api/health.mjs",
+        "src/index.mjs",
+        "src/services/inventoryService.mjs",
+        "src/services/orderService.mjs",
+        "src/services/paymentService.mjs",
+        "src/services/reportService.mjs",
+        "src/utils/format.mjs",
+        "src/utils/logger.mjs",
+        "src/utils/validate.mjs"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "models +7",
+      "size": 8,
+      "cohesion": 0.65,
+      "lead": "src/models/index.mjs",
+      "files": [
+        "src/config/settings.mjs",
+        "src/models/address.mjs",
+        "src/models/index.mjs",
+        "src/models/order.mjs",
+        "src/models/product.mjs",
+        "src/models/user.mjs",
+        "src/services/discountService.mjs",
+        "src/services/pricingService.mjs"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "userService +3",
+      "size": 4,
+      "cohesion": 0.4,
+      "lead": "src/services/userService.mjs",
+      "files": [
+        "src/api/orderRoutes.mjs",
+        "src/api/router.mjs",
+        "src/api/userRoutes.mjs",
+        "src/services/userService.mjs"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "bus +1",
+      "size": 2,
+      "cohesion": 0.49,
+      "lead": "src/events/bus.mjs",
+      "files": [
+        "src/events/bus.mjs",
+        "src/services/notificationService.mjs"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "legacy",
+      "size": 1,
+      "cohesion": 1,
+      "lead": "src/utils/legacy.mjs",
+      "files": [
+        "src/utils/legacy.mjs"
+      ]
+    }
+  ],
+  "folders": [
+    {
+      "dir": "src/api",
+      "files": 4,
+      "lines": 31,
+      "risk": 33,
+      "hot": 0,
+      "c90": 7,
+      "owner": 1
+    },
+    {
+      "dir": "src/config",
+      "files": 1,
+      "lines": 3,
+      "risk": 10,
+      "hot": 0,
+      "c90": 0,
+      "owner": 0
+    },
+    {
+      "dir": "src/events",
+      "files": 1,
+      "lines": 3,
+      "risk": 19,
+      "hot": 0,
+      "c90": 1,
+      "owner": 2
+    },
+    {
+      "dir": "src",
+      "files": 1,
+      "lines": 14,
+      "risk": 0,
+      "hot": 0,
+      "c90": 0,
+      "owner": 1
+    },
+    {
+      "dir": "src/models",
+      "files": 5,
+      "lines": 27,
+      "risk": 13,
+      "hot": 0,
+      "c90": 3,
+      "owner": 1
+    },
+    {
+      "dir": "src/services",
+      "files": 8,
+      "lines": 99,
+      "risk": 24,
+      "hot": 0,
+      "c90": 12,
+      "owner": 0
+    },
+    {
+      "dir": "src/utils",
+      "files": 4,
+      "lines": 13,
+      "risk": 17,
+      "hot": 0,
+      "c90": 1,
+      "owner": 1
+    }
+  ],
+  "coupling": [
+    {
+      "from": "src/services",
+      "to": "src/utils",
+      "count": 11
+    },
+    {
+      "from": "src/api",
+      "to": "src/services",
+      "count": 4
+    },
+    {
+      "from": "src",
+      "to": "src/api",
+      "count": 4
+    },
+    {
+      "from": "src",
+      "to": "src/services",
+      "count": 3
+    },
+    {
+      "from": "src/services",
+      "to": "src/models",
+      "count": 3
+    },
+    {
+      "from": "src/services",
+      "to": "src/events",
+      "count": 3
+    },
+    {
+      "from": "src/services",
+      "to": "src/config",
+      "count": 2
+    },
+    {
+      "from": "src",
+      "to": "src/utils",
+      "count": 1
+    }
+  ],
+  "symbols": [
+    {
+      "id": "src/api/orderRoutes.mjs#paginate",
+      "file": "src/api/orderRoutes.mjs",
+      "name": "paginate",
+      "kind": "function",
+      "line": 10,
+      "uses": [],
+      "total": 0
+    },
+    {
+      "id": "src/api/router.mjs#route",
+      "file": "src/api/router.mjs",
+      "name": "route",
+      "kind": "function",
+      "line": 3,
+      "uses": [
+        {
+          "file": "src/api/health.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "route",
+          "test": false
+        },
+        {
+          "file": "src/api/orderRoutes.mjs",
+          "count": 2,
+          "via": [],
+          "how": "import",
+          "local": "route",
+          "test": false
+        },
+        {
+          "file": "src/api/userRoutes.mjs",
+          "count": 2,
+          "via": [],
+          "how": "import",
+          "local": "route",
+          "test": false
+        }
+      ],
+      "total": 5
+    },
+    {
+      "id": "src/api/router.mjs#dispatch",
+      "file": "src/api/router.mjs",
+      "name": "dispatch",
+      "kind": "function",
+      "line": 4,
+      "uses": [
+        {
+          "file": "src/index.mjs",
+          "count": 3,
+          "via": [],
+          "how": "import",
+          "local": "dispatch",
+          "test": false
+        }
+      ],
+      "total": 3
+    },
+    {
+      "id": "src/api/userRoutes.mjs#paginate",
+      "file": "src/api/userRoutes.mjs",
+      "name": "paginate",
+      "kind": "function",
+      "line": 8,
+      "uses": [],
+      "total": 0
+    },
+    {
+      "id": "src/config/settings.mjs#TAX_RATE",
+      "file": "src/config/settings.mjs",
+      "name": "TAX_RATE",
+      "kind": "const",
+      "line": 2,
+      "uses": [
+        {
+          "file": "src/services/pricingService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "TAX_RATE",
+          "test": false
+        }
+      ],
+      "total": 1
+    },
+    {
+      "id": "src/config/settings.mjs#CURRENCY",
+      "file": "src/config/settings.mjs",
+      "name": "CURRENCY",
+      "kind": "const",
+      "line": 3,
+      "uses": [],
+      "total": 0
+    },
+    {
+      "id": "src/config/settings.mjs#FREE_SHIPPING_FROM",
+      "file": "src/config/settings.mjs",
+      "name": "FREE_SHIPPING_FROM",
+      "kind": "const",
+      "line": 4,
+      "uses": [
+        {
+          "file": "src/services/discountService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "FREE_SHIPPING_FROM",
+          "test": false
+        },
+        {
+          "file": "src/services/pricingService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "FREE_SHIPPING_FROM",
+          "test": false
+        }
+      ],
+      "total": 2
+    },
+    {
+      "id": "src/events/bus.mjs#on",
+      "file": "src/events/bus.mjs",
+      "name": "on",
+      "kind": "function",
+      "line": 3,
+      "uses": [
+        {
+          "file": "src/services/notificationService.mjs",
+          "count": 2,
+          "via": [],
+          "how": "import",
+          "local": "on",
+          "test": false
+        }
+      ],
+      "total": 2
+    },
+    {
+      "id": "src/events/bus.mjs#emit",
+      "file": "src/events/bus.mjs",
+      "name": "emit",
+      "kind": "function",
+      "line": 4,
+      "uses": [
+        {
+          "file": "src/services/orderService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "emit",
+          "test": false
+        },
+        {
+          "file": "src/services/userService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "emit",
+          "test": false
+        }
+      ],
+      "total": 2
+    },
+    {
+      "id": "src/models/address.mjs#Address",
+      "file": "src/models/address.mjs",
+      "name": "Address",
+      "kind": "class",
+      "line": 2,
+      "uses": [],
+      "total": 0
+    },
+    {
+      "id": "src/models/order.mjs#Order",
+      "file": "src/models/order.mjs",
+      "name": "Order",
+      "kind": "class",
+      "line": 7,
+      "uses": [
+        {
+          "file": "src/services/orderService.mjs",
+          "count": 1,
+          "via": [
+            "src/models/index.mjs"
+          ],
+          "how": "import",
+          "local": "Order",
+          "test": false
+        }
+      ],
+      "total": 1
+    },
+    {
+      "id": "src/models/product.mjs#Product",
+      "file": "src/models/product.mjs",
+      "name": "Product",
+      "kind": "class",
+      "line": 2,
+      "uses": [
+        {
+          "file": "src/services/inventoryService.mjs",
+          "count": 1,
+          "via": [
+            "src/models/index.mjs"
+          ],
+          "how": "import",
+          "local": "Product",
+          "test": false
+        },
+        {
+          "file": "src/models/order.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "Product",
+          "test": false
+        }
+      ],
+      "total": 2
+    },
+    {
+      "id": "src/models/user.mjs#User",
+      "file": "src/models/user.mjs",
+      "name": "User",
+      "kind": "class",
+      "line": 3,
+      "uses": [
+        {
+          "file": "src/services/userService.mjs",
+          "count": 1,
+          "via": [
+            "src/models/index.mjs"
+          ],
+          "how": "import",
+          "local": "User",
+          "test": false
+        },
+        {
+          "file": "src/models/order.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "User",
+          "test": false
+        }
+      ],
+      "total": 2
+    },
+    {
+      "id": "src/services/discountService.mjs#volumeDiscount",
+      "file": "src/services/discountService.mjs",
+      "name": "volumeDiscount",
+      "kind": "function",
+      "line": 5,
+      "uses": [],
+      "total": 0
+    },
+    {
+      "id": "src/services/inventoryService.mjs#addProduct",
+      "file": "src/services/inventoryService.mjs",
+      "name": "addProduct",
+      "kind": "function",
+      "line": 6,
+      "uses": [
+        {
+          "file": "src/index.mjs",
+          "count": 2,
+          "via": [],
+          "how": "import",
+          "local": "addProduct",
+          "test": false
+        },
+        {
+          "file": "test/orderService.test.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "addProduct",
+          "test": true
+        }
+      ],
+      "total": 2
+    },
+    {
+      "id": "src/services/inventoryService.mjs#reserve",
+      "file": "src/services/inventoryService.mjs",
+      "name": "reserve",
+      "kind": "function",
+      "line": 11,
+      "uses": [
+        {
+          "file": "src/services/orderService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "reserve",
+          "test": false
+        }
+      ],
+      "total": 1
+    },
+    {
+      "id": "src/services/inventoryService.mjs#restock",
+      "file": "src/services/inventoryService.mjs",
+      "name": "restock",
+      "kind": "function",
+      "line": 18,
+      "uses": [],
+      "total": 0
+    },
+    {
+      "id": "src/services/notificationService.mjs#startNotifications",
+      "file": "src/services/notificationService.mjs",
+      "name": "startNotifications",
+      "kind": "function",
+      "line": 4,
+      "uses": [
+        {
+          "file": "src/index.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "startNotifications",
+          "test": false
+        }
+      ],
+      "total": 1
+    },
+    {
+      "id": "src/services/notificationService.mjs#digestLine",
+      "file": "src/services/notificationService.mjs",
+      "name": "digestLine",
+      "kind": "function",
+      "line": 10,
+      "uses": [],
+      "total": 0
+    },
+    {
+      "id": "src/services/orderService.mjs#placeOrder",
+      "file": "src/services/orderService.mjs",
+      "name": "placeOrder",
+      "kind": "function",
+      "line": 9,
+      "uses": [
+        {
+          "file": "src/api/orderRoutes.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "placeOrder",
+          "test": false
+        },
+        {
+          "file": "test/orderService.test.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "placeOrder",
+          "test": true
+        }
+      ],
+      "total": 1
+    },
+    {
+      "id": "src/services/orderService.mjs#markPaid",
+      "file": "src/services/orderService.mjs",
+      "name": "markPaid",
+      "kind": "function",
+      "line": 20,
+      "uses": [
+        {
+          "file": "src/services/paymentService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "markPaid",
+          "test": false
+        }
+      ],
+      "total": 1
+    },
+    {
+      "id": "src/services/orderService.mjs#listOrders",
+      "file": "src/services/orderService.mjs",
+      "name": "listOrders",
+      "kind": "function",
+      "line": 21,
+      "uses": [
+        {
+          "file": "src/api/orderRoutes.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "listOrders",
+          "test": false
+        },
+        {
+          "file": "src/services/reportService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "listOrders",
+          "test": false
+        }
+      ],
+      "total": 2
+    },
+    {
+      "id": "src/services/orderService.mjs#taxPart",
+      "file": "src/services/orderService.mjs",
+      "name": "taxPart",
+      "kind": "function",
+      "line": 23,
+      "uses": [],
+      "total": 0
+    },
+    {
+      "id": "src/services/paymentService.mjs#charge",
+      "file": "src/services/paymentService.mjs",
+      "name": "charge",
+      "kind": "function",
+      "line": 5,
+      "uses": [
+        {
+          "file": "src/services/orderService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "charge",
+          "test": false
+        }
+      ],
+      "total": 1
+    },
+    {
+      "id": "src/services/paymentService.mjs#fee",
+      "file": "src/services/paymentService.mjs",
+      "name": "fee",
+      "kind": "function",
+      "line": 11,
+      "uses": [],
+      "total": 0
+    },
+    {
+      "id": "src/services/pricingService.mjs#withTax",
+      "file": "src/services/pricingService.mjs",
+      "name": "withTax",
+      "kind": "function",
+      "line": 4,
+      "uses": [
+        {
+          "file": "src/services/discountService.mjs",
+          "count": 2,
+          "via": [],
+          "how": "import",
+          "local": "withTax",
+          "test": false
+        },
+        {
+          "file": "test/pricing.test.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "withTax",
+          "test": true
+        }
+      ],
+      "total": 2
+    },
+    {
+      "id": "src/services/pricingService.mjs#shipping",
+      "file": "src/services/pricingService.mjs",
+      "name": "shipping",
+      "kind": "function",
+      "line": 5,
+      "uses": [
+        {
+          "file": "test/pricing.test.mjs",
+          "count": 2,
+          "via": [],
+          "how": "import",
+          "local": "shipping",
+          "test": true
+        }
+      ],
+      "total": 0
+    },
+    {
+      "id": "src/services/pricingService.mjs#label",
+      "file": "src/services/pricingService.mjs",
+      "name": "label",
+      "kind": "function",
+      "line": 6,
+      "uses": [
+        {
+          "file": "src/api/orderRoutes.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "label",
+          "test": false
+        }
+      ],
+      "total": 1
+    },
+    {
+      "id": "src/services/reportService.mjs#report",
+      "file": "src/services/reportService.mjs",
+      "name": "report",
+      "kind": "function",
+      "line": 4,
+      "uses": [
+        {
+          "file": "src/index.mjs",
+          "count": 1,
+          "via": [],
+          "how": "dinámico",
+          "test": false
+        }
+      ],
+      "total": 1
+    },
+    {
+      "id": "src/services/reportService.mjs#summaryLine",
+      "file": "src/services/reportService.mjs",
+      "name": "summaryLine",
+      "kind": "function",
+      "line": 10,
+      "uses": [
+        {
+          "file": "src/index.mjs",
+          "count": 1,
+          "via": [],
+          "how": "dinámico",
+          "test": false
+        }
+      ],
+      "total": 1
+    },
+    {
+      "id": "src/services/reportService.mjs#taxOf",
+      "file": "src/services/reportService.mjs",
+      "name": "taxOf",
+      "kind": "function",
+      "line": 17,
+      "uses": [
+        {
+          "file": "src/index.mjs",
+          "count": 1,
+          "via": [],
+          "how": "dinámico",
+          "test": false
+        }
+      ],
+      "total": 1
+    },
+    {
+      "id": "src/services/userService.mjs#createUser",
+      "file": "src/services/userService.mjs",
+      "name": "createUser",
+      "kind": "function",
+      "line": 7,
+      "uses": [
+        {
+          "file": "src/api/userRoutes.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "createUser",
+          "test": false
+        },
+        {
+          "file": "test/orderService.test.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "createUser",
+          "test": true
+        },
+        {
+          "file": "test/userService.test.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "createUser",
+          "test": true
+        }
+      ],
+      "total": 1
+    },
+    {
+      "id": "src/services/userService.mjs#getUser",
+      "file": "src/services/userService.mjs",
+      "name": "getUser",
+      "kind": "function",
+      "line": 15,
+      "uses": [
+        {
+          "file": "src/api/orderRoutes.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "getUser",
+          "test": false
+        },
+        {
+          "file": "src/api/userRoutes.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "getUser",
+          "test": false
+        }
+      ],
+      "total": 2
+    },
+    {
+      "id": "src/utils/format.mjs#money",
+      "file": "src/utils/format.mjs",
+      "name": "money",
+      "kind": "function",
+      "line": 2,
+      "uses": [
+        {
+          "file": "src/services/paymentService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "money",
+          "test": false
+        },
+        {
+          "file": "src/services/pricingService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "money",
+          "test": false
+        },
+        {
+          "file": "src/services/reportService.mjs",
+          "count": 5,
+          "via": [],
+          "how": "import",
+          "local": "money",
+          "test": false
+        }
+      ],
+      "total": 7
+    },
+    {
+      "id": "src/utils/format.mjs#pad",
+      "file": "src/utils/format.mjs",
+      "name": "pad",
+      "kind": "function",
+      "line": 3,
+      "uses": [],
+      "total": 0
+    },
+    {
+      "id": "src/utils/format.mjs#stamp",
+      "file": "src/utils/format.mjs",
+      "name": "stamp",
+      "kind": "const",
+      "line": 4,
+      "uses": [
+        {
+          "file": "src/utils/logger.mjs",
+          "count": 2,
+          "via": [],
+          "how": "import",
+          "local": "stamp",
+          "test": false
+        }
+      ],
+      "total": 2
+    },
+    {
+      "id": "src/utils/legacy.mjs#oldFormat",
+      "file": "src/utils/legacy.mjs",
+      "name": "oldFormat",
+      "kind": "function",
+      "line": 3,
+      "uses": [],
+      "total": 0
+    },
+    {
+      "id": "src/utils/logger.mjs#logger",
+      "file": "src/utils/logger.mjs",
+      "name": "logger",
+      "kind": "const",
+      "line": 3,
+      "uses": [
+        {
+          "file": "src/index.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "logger",
+          "test": false
+        },
+        {
+          "file": "src/services/inventoryService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "logger",
+          "test": false
+        },
+        {
+          "file": "src/services/notificationService.mjs",
+          "count": 2,
+          "via": [],
+          "how": "import",
+          "local": "logger",
+          "test": false
+        },
+        {
+          "file": "src/services/orderService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "logger",
+          "test": false
+        },
+        {
+          "file": "src/services/paymentService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "logger",
+          "test": false
+        },
+        {
+          "file": "src/services/userService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "logger",
+          "test": false
+        }
+      ],
+      "total": 7
+    },
+    {
+      "id": "src/utils/validate.mjs#isEmail",
+      "file": "src/utils/validate.mjs",
+      "name": "isEmail",
+      "kind": "function",
+      "line": 1,
+      "uses": [
+        {
+          "file": "src/services/userService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "isEmail",
+          "test": false
+        }
+      ],
+      "total": 1
+    },
+    {
+      "id": "src/utils/validate.mjs#isPositive",
+      "file": "src/utils/validate.mjs",
+      "name": "isPositive",
+      "kind": "function",
+      "line": 2,
+      "uses": [
+        {
+          "file": "src/services/inventoryService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "isPositive",
+          "test": false
+        }
+      ],
+      "total": 1
+    },
+    {
+      "id": "src/utils/validate.mjs#assert",
+      "file": "src/utils/validate.mjs",
+      "name": "assert",
+      "kind": "function",
+      "line": 3,
+      "uses": [
+        {
+          "file": "src/services/orderService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "assert",
+          "test": false
+        },
+        {
+          "file": "src/services/userService.mjs",
+          "count": 1,
+          "via": [],
+          "how": "import",
+          "local": "assert",
+          "test": false
+        }
+      ],
+      "total": 2
+    }
+  ],
+  "dupes": {
+    "groups": [
+      {
+        "kind": "function",
+        "name": "paginate",
+        "type": "similar",
+        "sim": 0.89,
+        "lines": 8,
+        "tokens": 133,
+        "test": false,
+        "units": [
+          {
+            "file": "src/api/orderRoutes.mjs",
+            "name": "paginate",
+            "start": 10,
+            "end": 17,
+            "loc": 8,
+            "params": 2,
+            "test": false
+          },
+          {
+            "file": "src/api/userRoutes.mjs",
+            "name": "paginate",
+            "start": 8,
+            "end": 15,
+            "loc": 8,
+            "params": 2,
+            "test": false
+          }
+        ],
+        "files": [
+          "src/api/orderRoutes.mjs",
+          "src/api/userRoutes.mjs"
+        ],
+        "copies": 2,
+        "coRate": 1,
+        "coCount": 4,
+        "owners": [
+          1
+        ],
+        "sameFile": false,
+        "sev": "costosa",
+        "score": 68,
+        "id": "d0",
+        "suggest": {
+          "kind": "module",
+          "dir": "src/api",
+          "file": "src/api/paginate.mjs",
+          "name": "paginate",
+          "warn": [],
+          "text": "Mueve paginate() a src/api/paginate.mjs y importa desde 2 archivos. Las copias difieren un poco: unifica primero las diferencias como parámetros."
+        }
+      },
+      {
+        "kind": "function",
+        "name": "digestLine",
+        "type": "parametrizado",
+        "sim": 1,
+        "lines": 7,
+        "tokens": 105,
+        "test": false,
+        "units": [
+          {
+            "file": "src/services/notificationService.mjs",
+            "name": "digestLine",
+            "start": 10,
+            "end": 16,
+            "loc": 7,
+            "params": 2,
+            "test": false
+          },
+          {
+            "file": "src/services/reportService.mjs",
+            "name": "summaryLine",
+            "start": 10,
+            "end": 16,
+            "loc": 7,
+            "params": 2,
+            "test": false
+          }
+        ],
+        "files": [
+          "src/services/notificationService.mjs",
+          "src/services/reportService.mjs"
+        ],
+        "copies": 2,
+        "coRate": 0,
+        "coCount": 0,
+        "owners": [
+          2,
+          1
+        ],
+        "sameFile": false,
+        "sev": "latente",
+        "score": 26,
+        "id": "d1",
+        "suggest": {
+          "kind": "module",
+          "dir": "src/services",
+          "file": "src/services/digestLine.mjs",
+          "name": "digestLine",
+          "warn": [],
+          "text": "Mueve digestLine() a src/services/digestLine.mjs y importa desde 2 archivos. Solo cambian los nombres: se puede extraer tal cual."
+        }
+      }
+    ],
+    "constants": [
+      {
+        "value": "0.16",
+        "kind": "num",
+        "count": 3,
+        "files": 3,
+        "existing": {
+          "file": "src/config/settings.mjs",
+          "name": "TAX_RATE",
+          "line": 2
+        },
+        "at": [
+          {
+            "file": "src/services/orderService.mjs",
+            "line": 23
+          },
+          {
+            "file": "src/services/paymentService.mjs",
+            "line": 11
+          },
+          {
+            "file": "src/services/reportService.mjs",
+            "line": 17
+          }
+        ],
+        "sev": "info"
+      }
+    ],
+    "names": [],
+    "stats": {
+      "files": 27,
+      "units": 11,
+      "threshold": 0.8,
+      "minTokens": 40,
+      "minLines": 5
+    }
+  },
+  "insights": [
+    {
+      "id": "i0",
+      "sev": "alta",
+      "kind": "ciclo",
+      "title": "Ciclo entre services/paymentService y services/orderService",
+      "nodes": [
+        "src/services/paymentService.mjs",
+        "src/services/orderService.mjs"
+      ],
+      "detail": "Se importan entre sí. La dependencia más débil es services/orderService → services/paymentService (charge, 1 uso).",
+      "action": "Mueve charge a un módulo aparte o avisa con un evento por bus.mjs en lugar de importar."
+    },
+    {
+      "id": "i1",
+      "sev": "alta",
+      "kind": "hotspot",
+      "title": "services/orderService cambia mucho y otros dependen de él",
+      "nodes": [
+        "src/services/orderService.mjs"
+      ],
+      "detail": "5 cambios en 90 días · lo importan 3 archivos · tiene pruebas · solo lo toca Marco Díaz.",
+      "action": "Revisa si conviene dividirlo: cada cambio aquí puede afectar a sus dependientes."
+    },
+    {
+      "id": "i3",
+      "sev": "alta",
+      "kind": "acoplamiento",
+      "title": "api/orderRoutes y api/userRoutes cambian juntos sin importarse",
+      "nodes": [
+        "src/api/orderRoutes.mjs",
+        "src/api/userRoutes.mjs"
+      ],
+      "detail": "Aparecieron juntos en 4 commits (100% de los cambios del menos tocado) pero no hay ningún import entre ellos.",
+      "action": "Hay una regla compartida que no está escrita en el código. Considera una constante o un módulo común."
+    },
+    {
+      "id": "i4",
+      "sev": "alta",
+      "kind": "acoplamiento",
+      "title": "models/order y services/pricingService cambian juntos sin importarse",
+      "nodes": [
+        "src/models/order.mjs",
+        "src/services/pricingService.mjs"
+      ],
+      "detail": "Aparecieron juntos en 3 commits (100% de los cambios del menos tocado) pero no hay ningún import entre ellos.",
+      "action": "Hay una regla compartida que no está escrita en el código. Considera una constante o un módulo común."
+    },
+    {
+      "id": "i12",
+      "sev": "alta",
+      "kind": "duplicación",
+      "group": "d0",
+      "title": "paginate() está copiada en 2 archivos y las copias cambian juntas",
+      "nodes": [
+        "src/api/orderRoutes.mjs",
+        "src/api/userRoutes.mjs"
+      ],
+      "detail": "2 copias de ~8 líneas (similar, 89% parecidas). Aparecieron juntas en 4 commits (100% de los cambios del menos tocado).",
+      "action": "Mueve paginate() a src/api/paginate.mjs y importa desde 2 archivos. Las copias difieren un poco: unifica primero las diferencias como parámetros."
+    },
+    {
+      "id": "i2",
+      "sev": "media",
+      "kind": "pruebas",
+      "title": "1 módulo muy usado sin ninguna prueba",
+      "nodes": [
+        "src/api/router.mjs"
+      ],
+      "detail": "api/router (4). Ninguna prueba los toca, ni directa ni indirectamente.",
+      "action": "Empieza por el que más archivos importan."
+    },
+    {
+      "id": "i5",
+      "sev": "media",
+      "kind": "acoplamiento",
+      "title": "models/order y services/orderService cambian juntos sin importarse",
+      "nodes": [
+        "src/models/order.mjs",
+        "src/services/orderService.mjs"
+      ],
+      "detail": "Aparecieron juntos en 4 commits (67% de los cambios del menos tocado) pero no hay ningún import entre ellos.",
+      "action": "Hay una regla compartida que no está escrita en el código. Considera una constante o un módulo común."
+    },
+    {
+      "id": "i6",
+      "sev": "media",
+      "kind": "acoplamiento",
+      "title": "services/orderService y services/pricingService cambian juntos sin importarse",
+      "nodes": [
+        "src/services/orderService.mjs",
+        "src/services/pricingService.mjs"
+      ],
+      "detail": "Aparecieron juntos en 2 commits (67% de los cambios del menos tocado) pero no hay ningún import entre ellos.",
+      "action": "Hay una regla compartida que no está escrita en el código. Considera una constante o un módulo común."
+    },
+    {
+      "id": "i7",
+      "sev": "info",
+      "kind": "huérfano",
+      "title": "models/address no está conectado",
+      "nodes": [
+        "src/models/address.mjs"
+      ],
+      "detail": "Nadie lo importa y no cambia desde hace 160 días.",
+      "action": "Candidato a eliminar si no se usa fuera del código (scripts, configuración)."
+    },
+    {
+      "id": "i8",
+      "sev": "info",
+      "kind": "huérfano",
+      "title": "utils/legacy no está conectado",
+      "nodes": [
+        "src/utils/legacy.mjs"
+      ],
+      "detail": "Nadie lo importa y no cambia desde hace 262 días.",
+      "action": "Candidato a eliminar si no se usa fuera del código (scripts, configuración)."
+    },
+    {
+      "id": "i9",
+      "sev": "info",
+      "kind": "exports",
+      "title": "9 exports sin uso",
+      "nodes": [
+        "src/api/orderRoutes.mjs",
+        "src/api/userRoutes.mjs",
+        "src/config/settings.mjs",
+        "src/services/inventoryService.mjs",
+        "src/services/notificationService.mjs",
+        "src/services/orderService.mjs",
+        "src/services/paymentService.mjs",
+        "src/services/pricingService.mjs",
+        "src/utils/format.mjs"
+      ],
+      "detail": "orderRoutes.paginate, userRoutes.paginate, settings.CURRENCY, inventoryService.restock, notificationService.digestLine, orderService.taxPart….",
+      "action": "Quita el export o bórralo si ya no hace falta."
+    },
+    {
+      "id": "i10",
+      "sev": "info",
+      "kind": "recursión",
+      "title": "1 archivo con funciones recursivas",
+      "nodes": [
+        "src/utils/format.mjs"
+      ],
+      "detail": "utils/format: pad().",
+      "action": "Verifica el caso base y la profundidad máxima con entradas grandes."
+    },
+    {
+      "id": "i11",
+      "sev": "info",
+      "kind": "trabajo",
+      "title": "3 archivos con cambios sin commit",
+      "nodes": [
+        "src/models/user.mjs",
+        "src/services/discountService.mjs",
+        "src/services/inventoryService.mjs"
+      ],
+      "detail": "user (modificado), discountService (nuevo), inventoryService (modificado)."
+    },
+    {
+      "id": "i13",
+      "sev": "info",
+      "kind": "duplicación",
+      "group": "d1",
+      "title": "1 grupo de código parecido que hoy no cambia junto",
+      "nodes": [
+        "src/services/notificationService.mjs",
+        "src/services/reportService.mjs"
+      ],
+      "detail": "digestLine() ×2. Por ahora no cuestan: se editan por separado.",
+      "action": "Déjalas así hasta que una tercera copia o un cambio conjunto justifique extraer."
+    },
+    {
+      "id": "i14",
+      "sev": "info",
+      "kind": "constante",
+      "title": "0.16 se repite 3 veces en 3 archivos",
+      "nodes": [
+        "src/services/orderService.mjs",
+        "src/services/paymentService.mjs",
+        "src/services/reportService.mjs"
+      ],
+      "detail": "orderService.mjs:23, paymentService.mjs:11, reportService.mjs:17.",
+      "action": "Ya existe TAX_RATE en settings.mjs: úsala en lugar del literal."
+    }
+  ],
+  "health": {
+    "score": 59,
+    "grade": "atención",
+    "parts": [
+      {
+        "label": "ciclos de dependencia",
+        "count": 1,
+        "penalty": 12
+      },
+      {
+        "label": "acoplamiento oculto",
+        "count": 4,
+        "penalty": 12
+      },
+      {
+        "label": "módulos muy usados sin pruebas",
+        "count": 1,
+        "penalty": 2
+      },
+      {
+        "label": "archivos de riesgo alto",
+        "count": 1,
+        "penalty": 3
+      },
+      {
+        "label": "hotspots con un solo autor",
+        "count": 1,
+        "penalty": 3
+      },
+      {
+        "label": "archivos huérfanos",
+        "count": 2,
+        "penalty": 4
+      },
+      {
+        "label": "duplicación que se paga",
+        "count": 1,
+        "penalty": 5
+      }
+    ]
+  }
+}

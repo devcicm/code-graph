@@ -1,0 +1,28 @@
+{
+  "languages": {
+    "template": {
+      "name": "Plantilla HTML",
+      "exts": [
+        ".html"
+      ],
+      "ignore": [
+        "out",
+        "dist"
+      ],
+      "imports": [
+        {
+          "re": "<!--@include (\\S+?)-->",
+          "spec": 1
+        },
+        {
+          "re": "<script[^>]+src=[\"']([^\"']+)[\"']",
+          "spec": 1
+        }
+      ],
+      "resolver": "file"
+    }
+  },
+  "aux": [
+    "^demo/"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "edges": [
+    { "source": "src/models/order.mjs", "target": "src/services/paymentService.mjs", "kind": "relation", "card": "1:N", "label": "se cobra mediante", "reason": "Una orden puede tener varios intentos de cobro; paymentService la recibe por parámetro sin importarla." },
+    { "source": "src/models/product.mjs", "target": "src/services/inventoryService.mjs", "kind": "relation", "card": "N:1", "label": "se gestiona en", "reason": "El catálogo vive en inventoryService; cada Product pertenece a un único catálogo." }
+  ],
+  "notes": {
+    "src/utils/legacy.mjs": "Nadie lo importa y usa require en un proyecto ESM: candidato a eliminar.",
+    "src/services/orderService.mjs": "Punto central del flujo; rompe el ciclo con paymentService emitiendo un evento en lugar de importar markPaid."
+  }
+}
