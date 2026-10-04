@@ -33,6 +33,14 @@ Este documento sirve como bitácora viva para que el **Agente 1** (y futuros age
   - `PLAN.md`: Documenta la arquitectura en la sección `## codemap_desktop`.
 - **Comportamiento:** Si el visor corre de forma independiente (navegador o CLI), `bridge.js` detecta `window.parent === window` y no realiza ninguna acción extraña, preservando la compatibilidad standalone original.
 
+### Actualización: `feat(relations): diagnóstico ejecutivo de salud y top criticidad en panel lateral`
+- **Contexto UI en el Host (`codemap desktop`):**
+  - La pestaña lateral `CodeMap Relations` fue revitalizada para no limitarse a un contador de aristas salientes/entrantes que quedaba vacío en archivos como `STARTUP_REPORT.md`.
+  - Incorpora el bloque de **Salud del Proyecto** con anillo SVG dinámico (score 0-100, grado de salud, lista de advertencias arquitectónicas y acordeón de hallazgos con severidad).
+  - Incorpora la sección ejecutiva **Dónde mirar primero** (los 5 archivos de mayor riesgo del repositorio con badges de estado y score, con apertura instantánea en el editor nativo).
+  - **Ficha inteligente del archivo seleccionado:** discrimina entre archivos de código y documentación/auxiliares. Oculta el grafo vacío si no hay aristas y muestra tarjetas claras de contexto; si hay aristas, despliega el vecindario SVG interactivo, dependencias salientes/entrantes, co-cambios temporales Git y duplicados DRY.
+  - Incluye selector de vista (`[ Todo | Proyecto | Archivo ]`) y botón directo `⤢ Expandir Code Graph` para abrir la ventana 3D independiente de Electron.
+
 ---
 
 ## 3. Protocolo de Comunicación del Puente (`viewer/js/bridge.js`)
