@@ -41,6 +41,15 @@ Este documento sirve como bitácora viva para que el **Agente 1** (y futuros age
   - **Ficha inteligente del archivo seleccionado:** discrimina entre archivos de código y documentación/auxiliares. Oculta el grafo vacío si no hay aristas y muestra tarjetas claras de contexto; si hay aristas, despliega el vecindario SVG interactivo, dependencias salientes/entrantes, co-cambios temporales Git y duplicados DRY.
   - Incluye selector de vista (`[ Todo | Proyecto | Archivo ]`) y botón directo `⤢ Expandir Code Graph` para abrir la ventana 3D independiente de Electron.
 
+### Corrección: `fix(relations): estabilización de foco y prevención de bucles de render en botones`
+- **Problema detectado:** Al colocar el cursor sobre los botones del panel de relaciones, se generaba un ciclo de eventos que parecía un "loop de click", provocando jittering y afectando el foco de los elementos.
+- **Causas resueltas:**
+  1. `fetchCodeGraphData` re-disparaba llamadas cíclicas en `render()` si `worldData` tardaba en llegar. Se agregó `attemptedRoots = new Set()` para evitar llamadas recursivas infinitas sobre la misma raíz.
+  2. Múltiples mutaciones del store disparaban renders síncronos consecutivos. Se implementó `requestRender()` con `queueMicrotask` para consolidar ráfagas de eventos en un solo frame.
+  3. Los estilos `:hover` en `.cg-risk-row` y `.stat-card` usaban `transform: translateX/Y`, desplazando el botón bajo el cursor y causando oscilación continua. Se reemplazó por transiciones de color de borde/fondo sin movimiento geométrico.
+  4. Se aplicó `outline: none` en `:focus:not(:focus-visible)` y `:focus-visible` con `outline: 1.5px solid var(--accent-blue)`, preservando el foco del editor de código sin robar protagonismo al hacer click.
+  5. Se agregaron `type="button"`, `e.preventDefault()` y `e.stopPropagation()` a todos los botones interactivos del panel.
+
 ---
 
 ## 3. Protocolo de Comunicación del Puente (`viewer/js/bridge.js`)
