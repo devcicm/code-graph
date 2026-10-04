@@ -50,6 +50,16 @@ Este documento sirve como bitácora viva para que el **Agente 1** (y futuros age
   4. Se aplicó `outline: none` en `:focus:not(:focus-visible)` y `:focus-visible` con `outline: 1.5px solid var(--accent-blue)`, preservando el foco del editor de código sin robar protagonismo al hacer click.
   5. Se agregaron `type="button"`, `e.preventDefault()` y `e.stopPropagation()` a todos los botones interactivos del panel.
 
+### Corrección Global: `fix(ui): erradicación integral de oscilaciones de hover (loop de click) y estabilización de foco en toda la aplicación`
+- **Problema Global Reportado:** El comportamiento errático ("loop de click al colocar el cursor y foco saltando") se manifestaba transversalmente en múltiples botones y componentes de la aplicación.
+- **Causas Raíz Identificadas y Resueltas en Toda la Aplicación:**
+  1. **Oscilación Biestable por Scrollbars (`scrollbar-gutter: stable`):** Los paneles con `overflow-y: auto` (`.relations-panel`, `.file-tree`, `.secondary-content`) cambiaban de ancho 17px cuando un microcambio en hover o focus hacía aparecer y desaparecer el scrollbar vertical repetidamente a 60fps. Se aplicó `scrollbar-gutter: stable; overflow-x: hidden;` para que el ancho útil sea constante.
+  2. **Eliminación de `transition: all` en Controles:** Los botones que usaban `transition: all` animaban propiedades de caja (padding, outline, font-weight, width), generando subpíxeles inestables. Se migraron a transiciones específicas y seguras (`background`, `color`, `border-color`).
+  3. **Target Flickering (SVG / spans / texto dentro de botones):** Se aplicó `pointer-events: none` global a todo elemento descendiente dentro de cualquier botón interactivo (`button *`, `[role="button"] *`, `.act-btn *`, etc.) garantizando que el puntero nunca alterne eventos entre el botón y sus hijos.
+  4. **Outline Ceñido sin Desbordamiento:** Se configuró `outline-offset: -1px !important;` en `:focus-visible`, garantizando que el anillo de accesibilidad por teclado se dibuje hacia el interior de la caja y jamás desborde el contenedor ni active scrollbars temporales.
+  5. **Desfocalización Inmediata (`e.currentTarget.blur()`):** En todos los clicks de botones de barra de herramientas (titlebar, explorer actions, tab bars, relations panel, activity bar, dock tabs), se desenfoca el botón al hacer click de ratón para que el foco permanezca en el editor de código.
+  6. **Debouncing y Filtrado de Acciones en `FileTreeView` y `ProjectExplorer`:** Se implementó `requestRender()` con microtareas y filtrado de eventos de store para evitar que mutaciones ajenas destruyan y reconstruyan los árboles DOM en cada frame, preservando siempre `scrollTop`.
+
 ---
 
 ## 3. Protocolo de Comunicación del Puente (`viewer/js/bridge.js`)
