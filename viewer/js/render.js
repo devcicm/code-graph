@@ -303,11 +303,11 @@ function drawGraphScene(a, act) {
 }
 
 /* ───── galaxias y conjuntos: dónde está cada uno (galaxia: posición exacta; grafo: centro y extensión de sus archivos) ───── */
-function groupSpots(time) {
+function groupSpots() {
   if (S.mode === 'city') return [];
   const gal = S.mode === 'galaxy', out = [], pts = (m) => { const o = []; for (const n of m) { const v = S.VM.get(n.id); if (v?.vis) o.push([v.x, v.y]); } return o; };
   for (const g of S.systems) {
-    if (gal) { out.push({ g, x: g.cx, y: g.cy, r: g.R, subs: g.subs.map((s) => { const [x, y] = subAt(g, s, time); return { s, x, y, r: s.r, tight: s.members.length > 1 }; }) }); continue; }
+    if (gal) { out.push({ g, x: g.cx, y: g.cy, r: g.R, subs: g.subs.map((s) => { const v = S.VM.get(s.members[0].id); return { s, x: v.x, y: v.y, r: s.r, tight: s.members.length > 1 }; }) }); continue; } // el 1.º miembro está en el centro del conjunto: así contorno y nombre siguen a los archivos (también con la animación pausada o en transición)
     const c = CLUSTERS.spread(pts(g.members)); if (!c) continue; c.r = c.r * 1.25 + 30;
     const subs = g.subs.map((s) => { const q = CLUSTERS.spread(pts(s.members)); return q && { s, x: q.x, y: q.y, r: q.r * 1.25 + 22, tight: s.members.length > 1 && q.r * 1.25 + 22 < c.r * 0.75 }; }).filter(Boolean);
     out.push({ g, ...c, subs });
@@ -489,7 +489,7 @@ function draw(time) {
   prepProj(); HIT.length = 0;
   ctx.setTransform(DPR, 0, 0, DPR, 0, 0); ctx.clearRect(0, 0, W, H); ctx.fillStyle = css(T.stage); ctx.fillRect(0, 0, W, H);
   S.pulse = [...S.VM.values()].some((v) => v.vis && (v.n.state === 'caliente')) || S.tl != null;
-  const act = activeSet(), m = S.mix < 1 ? ease(S.mix) : 1; S.aura = buildAura(); S.spots = groupSpots(time);
+  const act = activeSet(), m = S.mix < 1 ? ease(S.mix) : 1; S.aura = buildAura(); S.spots = groupSpots();
   if (S.mode === 'galaxy' || (S.prevMode === 'galaxy' && S.mix < 1)) spaceBackdrop(S.mode === 'galaxy' ? m : 1 - m, time);
   const scene = { city: drawCity, galaxy: drawGalaxy, graph: drawGraphScene };
   if (S.mix < 1 && S.prevMode) { const keep = HIT.length; scene[S.prevMode](1 - m, act, time); HIT.length = keep; }
