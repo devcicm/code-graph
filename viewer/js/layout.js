@@ -77,20 +77,11 @@ function buildCity() {
 }
 
 function buildGalaxy() {
-  const groups = new Map();
-  for (const n of S.nodes) {
-    const key = S.group === 'module' ? (n.community >= 0 ? 'm' + n.community : 'solo') : n.dir;
-    if (!groups.has(key)) groups.set(key, { key, name: S.group === 'module' ? (n.community >= 0 ? S.world.communities[n.community].name : 'Sin módulo') : n.dir, color: S.group === 'module' ? (n.community >= 0 ? n.community : 7) : S.dirIdx.get(n.dir) ?? 0, members: [] });
-    groups.get(key).members.push(n);
-  }
-  const list = [...groups.values()].sort((a, b) => b.members.length - a.members.length);
+  const list = CLUSTERS.groupsOf(S.nodes, S.world.communities, S.group === 'module' ? 'module' : 'folder');
   for (const g of list) {
-    g.members.sort((a, b) => (b.fanIn * 2 + b.fanOut + (b.loc || 0) / 60) - (a.fanIn * 2 + a.fanOut + (a.loc || 0) / 60));
-    g.members.forEach((n, k) => {
-      const r = k === 0 ? 0 : 34 + 22 * Math.sqrt(k), a = k * 2.39996; const vm = S.VM.get(n.id);
-      vm.gal = { r, a, sp: k === 0 ? 0 : 0.5 / Math.sqrt(r + 30), g };
-    });
-    g.R = 40 + 22 * Math.sqrt(g.members.length) + 14;
+    g.color = g.community != null ? (g.community >= 0 ? g.community : 7) : S.dirIdx.get(g.dir) ?? 0;
+    CLUSTERS.packGalaxy(g); g.w = g.subs.length ? 0.12 / Math.sqrt(g.R + 30) : 0; // los conjuntos giran juntos, despacio
+    for (const n of g.members) { const sl = g.slots.get(n.id), vm = S.VM.get(n.id); vm.gal = { r: sl.r, a: sl.a, sp: sl.r ? 0.5 / Math.sqrt(sl.r + 30) : 0, g, sub: sl.sub }; }
   }
   const placed = [];
   for (const g of list) {
@@ -104,11 +95,13 @@ function buildGalaxy() {
   }
   S.systems = list;
 }
-const galaxyAt = (vm, t) => { const g = vm.gal, a = g.a + (S.layers.anim ? g.sp * t : 0); return [g.g.cx + Math.cos(a) * g.r, g.g.cy + Math.sin(a) * g.r]; };
+/** centro de un conjunto dentro de su galaxia en el instante t (gira con la galaxia) */
+const subAt = (g, s, t) => { const w = S.layers.anim ? g.w * t : 0, c = Math.cos(w), si = Math.sin(w); return [g.cx + s.lx * c - s.ly * si, g.cy + s.lx * si + s.ly * c]; };
+const galaxyAt = (vm, t) => { const g = vm.gal, a = g.a + (S.layers.anim ? g.sp * t : 0), [ox, oy] = g.sub ? subAt(g.g, g.sub, t) : [g.g.cx, g.g.cy]; return [ox + Math.cos(a) * g.r, oy + Math.sin(a) * g.r]; };
 
 function buildGraph() {
   const V = [...S.VM.values()]; if (!V.length) return;
-  V.forEach((vm, i) => { vm.gvx = 0; vm.gvy = 0; const [x, y] = galaxyAt(vm, 0); vm.graph = { x: x * 1.25 + Math.sin(i * 7) * 14, y: y * 1.25 + Math.cos(i * 5) * 14 }; vm.gx = vm.graph.x; vm.gy = vm.graph.y; });
+  V.forEach((vm, i) => { const g = vm.gal; vm.home = g.sub ? subAt(g.g, g.sub, 0) : [g.g.cx, g.g.cy]; vm.gvx = 0; vm.gvy = 0; const [x, y] = galaxyAt(vm, 0); vm.graph = { x: x * 1.25 + Math.sin(i * 7) * 14, y: y * 1.25 + Math.cos(i * 5) * 14 }; vm.gx = vm.graph.x; vm.gy = vm.graph.y; });
   const idx = new Map(V.map((vm, i) => [vm.n.id, i])), E = [];
   for (const e of S.edges) {
     const a = idx.get(e.source), b = idx.get(e.target); if (a == null || b == null || a === b) continue;
@@ -135,7 +128,7 @@ function buildGraph() {
       A.gvx += (dx / d) * f; A.gvy += (dy / d) * f; B.gvx -= (dx / d) * f; B.gvy -= (dy / d) * f;
     }
     for (const vm of V) {
-      const g = vm.gal.g; vm.gvx += (-vm.gx * 0.004 + (g.cx * 1.25 - vm.gx) * 0.006) * (0.3 + alpha); vm.gvy += (-vm.gy * 0.004 + (g.cy * 1.25 - vm.gy) * 0.006) * (0.3 + alpha);
+      const [hx, hy] = vm.home; vm.gvx += (-vm.gx * 0.004 + (hx * 1.25 - vm.gx) * 0.006) * (0.3 + alpha); vm.gvy += (-vm.gy * 0.004 + (hy * 1.25 - vm.gy) * 0.006) * (0.3 + alpha); // cada archivo tira hacia su conjunto
       vm.gvx *= 0.62; vm.gvy *= 0.62; vm.gx += vm.gvx; vm.gy += vm.gvy;
     }
   }

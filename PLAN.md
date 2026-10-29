@@ -11,7 +11,7 @@ Responder rápido, sin leer cientos de archivos: ¿qué hay aquí?, ¿qué depen
 | Vista | Metáfora | Para qué |
 |---|---|---|
 | **Ciudad** (por defecto) | Carpetas = distritos, archivos = edificios; altura = líneas / uso / cambios / riesgo | Orientarse, ver dónde está el peso |
-| **Galaxia** | Módulos detectados (o carpetas) = sistemas; archivos = planetas que orbitan | Ver agrupaciones reales vs. carpetas |
+| **Galaxia** | Módulos detectados (o carpetas) = galaxias; dentro, conjuntos con nombre (carpetas o módulos); archivos = planetas | Ver agrupaciones reales vs. carpetas |
 | **Grafo** | Fuerzas: lo que se importa se atrae | Ver dependencias y ciclos |
 
 Pasar de una a otra anima los mismos objetos; la cámara gira en pasos de 90° y se inclina de plano a isométrico.
@@ -502,3 +502,17 @@ Probado contra Python, Go y C# reales (300 commits). Corregido:
 - **`review_pr(base)`** / `node guard.mjs <dir> pr [base]` (`lib/pr.mjs`): resumen en Markdown listo para pegar en un PR. Extrae la base con `git archive`, la compara con el árbol actual (incluye lo que aún no está en commit) y muestra riesgo del cambio (bajo/medio/alto), archivos, qué revisar, notas, pruebas a correr y quién debería revisar. Base y actual se miden igual (sin historial) para no confundir cambios reales con diferencias de medición; sale con código 1 si el riesgo es alto. Ejemplo de CI: `node guard.mjs . pr origin/main >> $GITHUB_STEP_SUMMARY`.
 
 **Siguiente (no hecho):** sugerencias de relaciones con candidatos detectados (túneles, constantes, puentes) como evidencia; explicaciones con citas.
+
+---
+
+## Galaxias con conjuntos etiquetados (`lib/clusters.mjs`)
+
+**Idea.** Una galaxia es un nodo grande que contiene n conjuntos de elementos, y cada conjunto lleva su nombre.
+
+- **Partición** (pura, la usan visor y demo): agrupando por **módulo**, cada galaxia se parte por **carpeta** (nombre relativo a la carpeta común, últimos 2 tramos); agrupando por **carpeta**, se parte por **módulo**. Más de 6 conjuntos → los menores se juntan en «otros N». Si sale uno solo, la galaxia queda como antes (una espiral).
+- **Galaxia:** cada conjunto es una mini-espiral; se empaquetan sin solaparse con hueco para su etiqueta y la galaxia se centra por masa. Los conjuntos giran juntos (despacio) y cada archivo orbita dentro de su conjunto.
+- **Etiquetas por nivel de zoom:** nombre de la galaxia + «n conjuntos · m archivos» debajo; con zoom suficiente, contorno punteado y «nombre · n» de cada conjunto (arriba del contorno, si no cabe abajo, si no se omite). Conjuntos de 1 archivo no se rotulan (ya lo nombra su etiqueta). Densidad «mínima» oculta los conjuntos. Lo que no está activo se atenúa.
+- **Grafo:** cada archivo tira hacia el centro de su conjunto, así los conjuntos quedan juntos; las etiquetas se calculan con el centro y la extensión **reales** de sus archivos (antes el nombre se dibujaba en la posición de la galaxia, no en la del grafo). Un conjunto disperso no se rotula. Cada galaxia es una nube suave detrás de sus archivos.
+- Todas pasan por el colocador anti-solapes (no tapan paneles ni archivos; las de archivos se acomodan alrededor).
+
+50 comprobaciones en el demo (partición exacta, conjuntos dentro de la galaxia y sin solaparse, nombres de módulo/carpeta). Verificado en navegador (claro/oscuro, galaxia por módulo/carpeta, grafo, zoom) sin errores de consola.

@@ -14,6 +14,7 @@ import { ask, suggest, snapshotOf, diffSince } from '../lib/qa.mjs';
 import { resolve as setOf, regions as regionsOf, layoutVenn, distFor, catalog as setCatalog, recipe as setRecipe } from '../lib/sets.mjs';
 import { plan as guardPlan, fingerprint as guardFp, check as guardCheck } from '../lib/guard.mjs';
 import { review as prReview } from '../lib/pr.mjs';
+import { groupsOf, packGalaxy, MAX_SUBS } from '../lib/clusters.mjs';
 import { execFileSync } from 'node:child_process';
 import { detectDuplicates } from '../lib/dupes.mjs';
 import { buildSnapshot } from '../lib/snapshot.mjs';
@@ -64,6 +65,12 @@ const checks = [
   ['Conjuntos: el área del cruce en el dibujo coincide con los datos (2 círculos)', () => { const A = { ids: new Set(Array.from({ length: 40 }, (_, i) => 'a' + i)) }, B = { ids: new Set([...Array.from({ length: 15 }, (_, i) => 'a' + i), ...Array.from({ length: 10 }, (_, i) => 'b' + i)]) }; const L = layoutVenn([A, B]); const [c1, c2] = L.circles, d = Math.hypot(c2.x - c1.x, c2.y - c1.y); const lens = (d, r1, r2) => { const a = r1 * r1 * Math.acos((d * d + r1 * r1 - r2 * r2) / (2 * d * r1)), b = r2 * r2 * Math.acos((d * d + r2 * r2 - r1 * r1) / (2 * d * r2)); return a + b - 0.5 * Math.sqrt((-d + r1 + r2) * (d + r1 - r2) * (d - r1 + r2) * (d + r1 + r2)); }; const frac = lens(d, c1.r, c2.r) / (Math.PI * c1.r * c1.r); return Math.abs(frac - 15 / 40) < 0.01; }],
   ['Conjuntos: recetas con datos (zona crítica, carpeta vs módulo) y catálogo con carpetas/módulos/etiquetas', () => { const c = setCatalog(w).map((g) => g.group); return setRecipe(w, 'critical').keys.length === 3 && setRecipe(w, 'folder-module').keys && c.includes('Carpetas') && c.includes('Módulos detectados') && c.includes('Etiquetas @set'); }],
   ['Conjuntos guardados: «saved:» resuelve ids y aparece en «Mis conjuntos»', () => { const w3 = { ...w, customSets: { critico: ['src/services/orderService.mjs', 'src/index.mjs', 'no/existe.mjs'] } }; return setOf(w3, 'saved:critico').size === 3 && setCatalog(w3).some((g) => g.group === 'Mis conjuntos' && g.items[0].key === 'saved:critico'); }],
+  ['Galaxias con conjuntos etiquetados: cada galaxia se parte en conjuntos con nombre que suman sus archivos, sin solaparse y dentro de ella', () => {
+    const F = w.nodes.filter((n) => n.kind === 'file'), mod = groupsOf(F, w.communities, 'module'), dir = groupsOf(F, w.communities, 'folder');
+    const exact = (gs) => gs.every((g) => !g.subs.length || g.subs.reduce((a, s) => a + s.members.length, 0) === g.members.length) && gs.reduce((a, g) => a + g.members.length, 0) === F.length;
+    const packed = (gs) => gs.every((g) => { packGalaxy(g); const S = g.subs; return g.members.every((n) => g.slots.has(n.id)) && S.every((a, i) => Math.hypot(a.lx, a.ly) + a.r <= g.R && S.slice(i + 1).every((b) => Math.hypot(a.lx - b.lx, a.ly - b.ly) >= a.r + b.r)); });
+    const big = mod.find((g) => g.name === 'orderService +8'), svc = dir.find((g) => g.name === 'src/services');
+    return exact(mod) && exact(dir) && packed(mod) && packed(dir) && mod.every((g) => g.subs.length <= MAX_SUBS) && big.subs.some((s) => s.name === 'src/services' && s.members.length === 4) && svc.subs.length >= 2 && svc.subs.every((s) => w.communities.some((c) => c.name === s.name)); }],
   ['Q: sugerencias dependen del archivo seleccionado', () => suggest(w, 'src/services/orderService.mjs')[0].text.includes('orderService')],
 ];
 function polyChecks() {
