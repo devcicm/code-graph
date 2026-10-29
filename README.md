@@ -27,7 +27,7 @@ node build-viewer.mjs ./mi-proyecto dist   # visor estático: dist/viewer.html (
 | Vista | Metáfora | Para qué |
 |---|---|---|
 | **Ciudad** (por defecto) | Carpetas = distritos, archivos = edificios | Orientarse, ver dónde está el peso |
-| **Galaxia** | Módulos detectados = sistemas, archivos = planetas | Ver agrupaciones reales frente a carpetas |
+| **Galaxia** | Módulos detectados = galaxias con conjuntos etiquetados (sus carpetas), archivos = planetas | Ver agrupaciones reales frente a carpetas |
 | **Grafo** | Fuerzas: lo que se importa se atrae | Ver dependencias y ciclos |
 
 ### Lentes
@@ -102,7 +102,7 @@ Regla sugerida para el `CLAUDE.md` / `AGENTS.md` de tu proyecto:
 | `node ask.mjs <dir> "pregunta" [--json] [--evidence] [--list]` | Preguntas con evidencia desde la terminal |
 | `node guard.mjs <dir> plan\|check\|pr` | Guardarraíles para quien edita |
 | `node mcp.mjs <dir>` | Servidor MCP por stdio |
-| `node demo/run-demo.mjs` | Demo completo y autoverificación (49 comprobaciones) |
+| `node demo/run-demo.mjs` | Demo completo y autoverificación (50 comprobaciones) |
 
 ## Configuración
 
@@ -145,7 +145,7 @@ proyecto ──► analyze.mjs + languages/ ──┐
 |---|---|
 | `analyze.mjs` | Orquestador: recorre, elige adaptador por extensión, resuelve y arma aristas |
 | `languages/` | `javascript.mjs` (adaptador JS/TS), `declarative.mjs` + `specs.mjs` (motor declarativo y lenguajes integrados) |
-| `lib/` | `git`, `metrics`, `stats`, `dupes`, `signals`, `bridges`, `qa`, `sets`, `guard`, `pr`, `snapshot`, `assemble` |
+| `lib/` | `git`, `metrics`, `stats`, `dupes`, `signals`, `bridges`, `qa`, `sets`, `clusters`, `guard`, `pr`, `snapshot`, `assemble` |
 | `viewer/` | `world.template.html` + `js/*`, ensamblados en un único HTML |
 | `demo/` | `run-demo.mjs`, proyectos de ejemplo (`sample-shop`, `sample-poly`, `sample-dry`) y `bench/` |
 | [`PLAN.md`](PLAN.md) | Diseño, estado de cada fase y decisiones |

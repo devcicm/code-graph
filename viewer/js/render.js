@@ -268,7 +268,7 @@ function drawGalaxy(a, act, time) {
     ctx.fillStyle = grad; ctx.beginPath(); ctx.arc(sx, sy, R, 0, 7); ctx.fill();
     ctx.setLineDash([2, 5]); ctx.strokeStyle = css(c, 0.35); ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(sx, sy, R * 0.86, 0, 7); ctx.stroke(); ctx.setLineDash([]);
   }
-  drawSetBlobs(); stars(a, act, true); ctx.globalAlpha = 1;
+  subRings(); drawSetBlobs(); stars(a, act, true); ctx.globalAlpha = 1;
 }
 function stars(a, act, glow) {
   const list = [...S.VM.values()].sort((p, q) => p.sz - q.sz);
@@ -292,7 +292,36 @@ function stars(a, act, glow) {
     HIT.push({ id: n.id, c: [sx, sy], r: r + 4, top: [sx, sy], below: r });
   }
 }
-function drawGraphScene(a, act) { ctx.globalAlpha = a; drawSetBlobs(); stars(a, act, false); ctx.globalAlpha = 1; }
+function drawGraphScene(a, act) {
+  ctx.globalAlpha = a;
+  for (const sp of S.spots || []) { // en el grafo cada galaxia es una nube suave alrededor de sus archivos reales
+    const [sx, sy] = proj(sp.x, sp.y, 0), R = sp.r * CAM.k, c = T.pal[sp.g.color % 8]; if (!onScr(sx, sy, R)) continue;
+    const grad = ctx.createRadialGradient(sx, sy, R * 0.1, sx, sy, R); grad.addColorStop(0, css(c, T.dark ? 0.12 : 0.1)); grad.addColorStop(1, css(c, 0));
+    ctx.fillStyle = grad; ctx.beginPath(); ctx.arc(sx, sy, R, 0, 7); ctx.fill();
+  }
+  subRings(); drawSetBlobs(); stars(a, act, false); ctx.globalAlpha = 1;
+}
+
+/* ───── galaxias y conjuntos: dónde está cada uno (galaxia: posición exacta; grafo: centro y extensión de sus archivos) ───── */
+function groupSpots() {
+  if (S.mode === 'city') return [];
+  const gal = S.mode === 'galaxy', out = [], pts = (m) => { const o = []; for (const n of m) { const v = S.VM.get(n.id); if (v?.vis) o.push([v.x, v.y]); } return o; };
+  for (const g of S.systems) {
+    if (gal) { out.push({ g, x: g.cx, y: g.cy, r: g.R, subs: g.subs.map((s) => { const v = S.VM.get(s.members[0].id); return { s, x: v.x, y: v.y, r: s.r, tight: s.members.length > 1 }; }) }); continue; } // el 1.º miembro está en el centro del conjunto: así contorno y nombre siguen a los archivos (también con la animación pausada o en transición)
+    const c = CLUSTERS.spread(pts(g.members)); if (!c) continue; c.r = c.r * 1.25 + 30;
+    const subs = g.subs.map((s) => { const q = CLUSTERS.spread(pts(s.members)); return q && { s, x: q.x, y: q.y, r: q.r * 1.25 + 22, tight: s.members.length > 1 && q.r * 1.25 + 22 < c.r * 0.75 }; }).filter(Boolean);
+    out.push({ g, ...c, subs });
+  }
+  return out;
+}
+/** contorno tenue de cada conjunto dentro de su galaxia (solo si se distingue: con zoom suficiente, compacto y de 2+ archivos; uno solo ya lo nombra su etiqueta) */
+function subRings() {
+  if (!S.layers.labels) return;
+  for (const sp of S.spots || []) for (const q of sp.subs) {
+    const R = q.r * CAM.k; if (R < 14 || !q.tight) continue; const [sx, sy] = proj(q.x, q.y, 0); if (!onScr(sx, sy, R)) continue;
+    ctx.setLineDash([1.5, 4]); ctx.strokeStyle = css(T.pal[sp.g.color % 8], 0.45); ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(sx, sy, R, 0, 7); ctx.stroke(); ctx.setLineDash([]);
+  }
+}
 
 /* ───── capas comunes: calles, túneles, ciclos, trazas ───── */
 function links(time, act) {
@@ -392,7 +421,14 @@ function labels() {
       const mx = (c[0][0] + c[1][0]) / 2, my = (c[0][1] + c[1][1]) / 2; if (Math.hypot(c[0][0] - c[1][0], c[0][1] - c[1][1]) < 40) continue;
       big(d.name.toUpperCase(), mx, my + 14, clamp(12 + k * 2, 12, 17) * TS(), css(T.muted, 1));
     }
-  } else for (const g of S.systems) { const [sx, sy] = proj(g.cx, g.cy, 0); big(`${g.name}`, sx, sy - g.R * k + 4, clamp(12 + k * 2, 12, 17) * TS(), css(T.muted, 1)); }
+  } else for (const sp of S.spots || []) { // cada galaxia: su nombre arriba y, debajo, cuántos conjuntos y archivos contiene
+    const g = sp.g, [sx, sy] = proj(sp.x, sp.y, 0), R = sp.r * k, size = clamp(12 + k * 2, 12, 17) * TS(), y = sy - R + 4;
+    if (S.mode === 'galaxy') big(g.name, sx, y, size, css(T.muted, 1));
+    else { const w = textW(g.name, size, 700), r = boxOf(sx, y - size * 0.35, w, size); if (!P.free(r)) continue; P.add(r); txt(g.name, sx, y, size, css(T.muted, 1), { weight: 700 }); }
+    if (R < 26) continue;
+    const sub = (g.subs.length ? `${g.subs.length} conjuntos · ` : '') + `${g.members.length} ${g.members.length === 1 ? 'archivo' : 'archivos'}`, ss = 11 * TS(), sw = textW(sub, ss, 500), cy = y + size * 0.3 + ss * 0.5 + 5, sr = boxOf(sx, cy, sw, ss);
+    if (P.free(sr)) { P.add(sr); txt(sub, sx, cy + ss * 0.35, ss, css(T.muted, 0.85)); }
+  }
   // 2) marcadores de los elementos (para que ninguna etiqueta los tape)
   const act = activeSet(), size = clamp(12 + k * 1.5, 12.5, 16) * TS(), items = [];
   for (const vm of S.VM.values()) {
@@ -406,6 +442,12 @@ function labels() {
   }
   const sv = S.sel && S.VM.get(S.sel); // pin de la selección
   if (sv && sv.vis) { const A = city ? proj(sv.x, sv.y, sv.h + 34) : proj(sv.x, sv.y, 0), y = city ? A[1] : A[1] - Math.max(3, sv.sz * k) - 22; P.add([A[0] - 8, y - 2, A[0] + 8, y + 12]); }
+  // 2b) nombre de cada conjunto dentro de su galaxia: arriba de su contorno, si no cabe abajo, si no se omite
+  if (dn !== 'min') for (const sp of S.spots || []) for (const q of sp.subs) {
+    const R = q.r * k; if (R < 14 || !q.tight) continue; const [sx, sy] = proj(q.x, q.y, 0); if (!onScr(sx, sy, R)) continue;
+    const s = `${q.s.name} · ${q.s.members.length}`, ss = clamp(10.5 + k, 10.5, 13.5) * TS(), w = textW(s, ss, 700), on = !act || q.s.members.some((n) => act.has(n.id));
+    for (const y of [sy - R - ss * 0.5 - 2, sy + R + ss * 0.5 + 2]) { const r = boxOf(sx, y, w, ss); if (!P.free(r)) continue; P.add(r); txt(s, sx, y + ss * 0.35, ss, css(shade(T.pal[sp.g.color % 8], T.dark ? 1.2 : 0.7), on ? 1 : 0.35), { weight: 700 }); break; }
+  }
   // 3) etiquetas de relaciones (primero: son las más específicas)
   const esz = 12 * TS();
   for (const el of EDGE_LBL) {
@@ -447,7 +489,7 @@ function draw(time) {
   prepProj(); HIT.length = 0;
   ctx.setTransform(DPR, 0, 0, DPR, 0, 0); ctx.clearRect(0, 0, W, H); ctx.fillStyle = css(T.stage); ctx.fillRect(0, 0, W, H);
   S.pulse = [...S.VM.values()].some((v) => v.vis && (v.n.state === 'caliente')) || S.tl != null;
-  const act = activeSet(), m = S.mix < 1 ? ease(S.mix) : 1; S.aura = buildAura();
+  const act = activeSet(), m = S.mix < 1 ? ease(S.mix) : 1; S.aura = buildAura(); S.spots = groupSpots();
   if (S.mode === 'galaxy' || (S.prevMode === 'galaxy' && S.mix < 1)) spaceBackdrop(S.mode === 'galaxy' ? m : 1 - m, time);
   const scene = { city: drawCity, galaxy: drawGalaxy, graph: drawGraphScene };
   if (S.mix < 1 && S.prevMode) { const keep = HIT.length; scene[S.prevMode](1 - m, act, time); HIT.length = keep; }
